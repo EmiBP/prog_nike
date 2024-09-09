@@ -1,0 +1,185 @@
+
+.boxSliders{
+
+  margin: 0 auto;
+  max-width: 50%;
+
+}
+
+.icons_product, .new_arrivals_product, .sport_product, .news_shoes  {
+  margin: 0 auto;
+
+  max-width: 1100px;
+  height: auto;
+
+}
+
+
+
+/*----------> new_arrivals_product, .icons_product, news_shoes e sport_product */
+
+/* slider wrap  */
+
+.icons_product .slider-wrap, .news_shoes .slider-wrap,.new_arrivals_product .slider-wrap, .sport_product .slider-wrap  {
+  width: 100%;
+  max-width: 1100px;
+  overflow: hidden;
+  margin: 0 auto;
+
+
+
+}
+
+/* h2 */
+.new_arrivals_product h2, .sport_product h2, .icons_product h2, .news_shoes h2  {
+
+
+
+  font-weight: 400;
+  color: #111111;
+  font-weight: 600;
+  max-width: 350px;
+
+  margin-bottom: 20px;
+
+}
+
+/* slider main */
+.icons_product .slider-main, .news_shoes .slider-main,.new_arrivals_product .slider-main, .sport_product .slider-main {
+
+   gap: 10px;
+    display: flex;
+    clear: both;
+
+
+  }
+  /* item */
+
+  .icons_product .item, .news_shoes .item,.new_arrivals_product .item, .sport_product .item {
+  display: flex;
+  max-width: 360px;
+
+
+
+  }
+
+  /* img */
+
+  .new_arrivals_product img, .sport_product img {
+    object-fit: cover;
+    width: 360px;
+    min-height: 450px;
+
+  }
+
+
+
+   /* -----------> icons_product e news_shoes */
+
+
+  /* img */
+
+  .icons_product img, .news_shoes img {
+    object-fit: cover;
+    width: 360px;
+    min-height: 200px;
+
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /* ainda em manutenção */
+
+  /* button area all */
+
+ .new_arrivals_product .button-area ,.sport_product .button-area {
+   display: flex;
+   justify-content: space-between;
+   padding: 0 20px;
+   position: relative;
+   bottom: 250px;
+
+
+
+  }
+
+  .icons_product .button-area ,.news_shoes .button-area {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    position: relative;
+    bottom: 170px;
+
+
+
+   }
+
+ /* all */
+
+
+ .prev, .next {
+  border: transparent;
+  border-radius: 30px;
+  padding: 10px;
+   display: flex;
+   background-color: rgb(255, 254, 254) ;
+
+ }
+
+
+
+ .next svg, .prev svg{
+  width: 30px;
+  height: auto;
+ }
+
+
+
+/* --------------- icons_product e sport_product */
+
+
+
+ .icons_product span, .sport_product span {
+  color: #111111;
+  position: relative;
+  width: 10px;
+  bottom: 50px;
+  right: 350px;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  border: solid transparent 1px;
+  background-color: aliceblue;
+  border-radius: 30px;
+ }
+
+ /* news_shoes news_shoesBloco_info  */
+
+
+ .news_shoesBloco_info {
+   font-weight: 600;
+   font-size: 16px;
+   gap: 10px;
+ color: #111111;
+ display: flex;
+ flex-direction: column;
+
+ }
+
+
+
+
+

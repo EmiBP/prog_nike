@@ -1,0 +1,38 @@
+.h1_news {
+ margin: 15px;
+ display: inline-block;
+}
+.containerNewsArrivals{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.container1{
+  width: 200px;
+  background-color: rgb(251, 236, 236);
+}
+
+.container2 {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-start;
+  max-width: 1100px;
+  min-height: 800px;
+  flex-wrap: wrap;
+
+
+
+}
+
+.prodotti_news img {
+
+  max-width: 350px;
+}
+
+.news_shoesBloco_info {
+  font-size: black;
+  display: flex;
+  flex-direction: column;
+}
+
+

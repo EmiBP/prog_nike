@@ -1,0 +1,22 @@
+<h1 class="h1_news">Nuovi Arrivi Nike</h1>
+<div class="containerNewsArrivals">
+  <div class="container1">
+    <span>oi</span>
+  </div>
+  <div class="container2" *ngIf="prodotti.length > 0; else semNovosProdutos">
+    <div class="prodotti_news" *ngFor="let prodotto of prodotti">
+      <a href="">
+        <img src="https://static.nike.com/a/images/f_auto/dpr_1.5,cs_srgb/w_599,c_limit/800b58e3-b669-4dc3-a2d4-e68f5688d151/nike-just-do-it.jpg" alt="">
+        <div class="news_shoesBloco_info">
+          <span>{{prodotto.nome}}</span>
+          <span>{{prodotto.prezzo}}</span>
+        </div>
+      </a>
+    </div>
+
+  </div>
+  <ng-template #semNovosProdutos>
+    <p>Nenhum novo produto disponível no momento.</p>
+  </ng-template>
+
+</div>

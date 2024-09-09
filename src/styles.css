@@ -1,1 +1,270 @@
-/* You can add global styles to this file, and also import other style files */
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: "Helvetica Now Text Medium", Helvetica, Arial, sans-serif;
+
+
+}
+
+html, body {
+
+  min-height: 100%;
+}
+
+
+
+
+a svg{
+color: black;
+
+}
+
+
+/* Header */
+
+.link_text_header {
+  display: none;
+}
+.icons_header {
+  display: block;
+}
+
+
+
+.box_header {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FFFFFF;
+
+
+}
+
+
+.box_header_img a img {
+  width: 120px;
+}
+
+.box_nav_header{
+  box-sizing: border-box;
+}
+.box_nav_header nav{
+  display: flex;
+  gap: 10px
+
+}
+
+
+/* HEADER category */
+.box_categoryC1_header,.box_icons_header, .box_inputSearch_header, .box_categoryC1_nav_header nav ul  {
+  display: flex;
+
+}
+
+
+.box_categoryC1_header {
+ display: block;
+justify-content:space-between;
+
+}
+
+.box_categoryC1_nav_header {
+  align-items: center;
+ font-size: 80%;
+
+}
+
+.box_categoryC1_nav_header ul {
+  gap: 10px;
+}
+
+
+.box_categoryC1_nav_header li a {
+  font-weight: 600;
+  color: rgb(39, 38, 38);
+
+
+}
+
+
+
+.box_inputSearch_header {
+  align-items: center;
+  padding-left: 10px;
+
+
+
+
+}
+
+
+.box_inputSearch_header input{
+  border: solid 1px transparent;
+  background-color: #f5f5f5 ;
+ border-radius: 20px;
+ padding: 10px 15px;
+
+}
+
+.box_inputSearch_header {
+  border-radius: 20px;
+  border: solid 1px transparent;
+  background-color: #f5f5f5;;
+}
+
+.box_icons_header {
+  gap: 10px;
+}
+
+/* box arrivals */
+
+.box_newArrivals_header  {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 400;
+  gap: 9px;
+  padding: 10px 0;
+
+
+}
+
+.box_newArrivals_header a {
+  font-size: 13px;
+  color: rgb(22, 20, 20);
+  cursor: pointer;
+  text-decoration: underline;
+
+}
+
+/* box banner */
+
+.box_banner_header {
+
+  display: flex;
+
+  clear: both;
+}
+
+.box_banner_header img {
+
+  min-width: 100%;
+
+
+}
+
+
+/* box fixed banner */
+
+
+.box_banner_fixed_header {
+
+  font-size: 9px;
+  background-color: transparent;
+  height: none;
+  padding: 10px;
+	position: relative;
+  bottom: 150px;
+  color: #f5f5f5;
+  margin-left:20px ;
+
+
+}
+
+.box_banner_fixed_header h1{
+  font-size: 12px;
+  font-weight: 800;
+
+}
+
+.box_banner_fixed_header p{
+  padding: 8px 0;
+
+}
+
+.box_banner_info_header {
+  display: flex;
+  gap: 10px;
+
+}
+
+.box_banner_info_header a {
+  border: solid 1px transparent;
+  background-color: antiquewhite;
+  border-radius: 30px;
+  padding: 6px;
+  color: rgb(18, 17, 17);
+}
+
+
+
+
+
+
+.box1_nav_header nav div:nth-child(n + 2) {
+   border-left: solid 1.2px black;
+
+ }
+.link_text_header {
+display: flex;
+align-items: flex-start;
+
+}
+
+.link_text_header {
+
+  padding: 0 6px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: rgb(12, 12, 12);
+  font-size: 11px;
+
+}
+
+/* box_category Nav Header menu nav que aparece evidencia scopri sport e td mais */
+
+
+.box_categoryC1_header {
+  display: flex;
+  justify-content: center;
+
+}
+
+.box_categoryC1_nav_header_newEvidence {
+  background-color: rgb(244, 248, 247);
+  width: 100%;
+  font-size: 13px;
+ display: flex;
+ position: absolute;
+ z-index: 2;
+ top: 75px;
+
+}
+
+.boxCAT1 {
+  width: 100%;
+  padding: 20px 0;
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+}
+
+
+.box_inEvidenza  ul, .box_scopriIcone ul, .box_scopriSport  ul{
+  display: flex;
+  flex-direction: column;
+
+}
+
+.boxCAT1 p{
+  font-weight: 600;
+}
+.boxCAT1 li {
+  line-height: 20px;
+}
+
