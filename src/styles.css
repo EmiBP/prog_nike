@@ -5,7 +5,7 @@
   text-decoration: none;
   list-style: none;
   font-family: "Helvetica Now Text Medium", Helvetica, Arial, sans-serif;
-
+  outline: none;
 
 }
 
@@ -26,10 +26,10 @@ color: black;
 /* Header */
 
 .link_text_header {
-  display: none;
+  display: block;
 }
 .icons_header {
-  display: block;
+  display: none;
 }
 
 
@@ -40,6 +40,7 @@ color: black;
   justify-content: space-between;
   align-items: center;
   background-color: #FFFFFF;
+  padding-top: 30px;
 
 
 }
@@ -73,8 +74,10 @@ justify-content:space-between;
 }
 
 .box_categoryC1_nav_header {
-  align-items: center;
+display: flex;
  font-size: 80%;
+ margin: 30px;
+ clear: both;
 
 }
 
@@ -90,11 +93,24 @@ justify-content:space-between;
 
 }
 
+/* input search header */
 
+.container_SearchHeader {
+  display: flex;
+  align-items: center;
+  background-color: aqua;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-right: 10px;
+  height: 0;
+  position: relative;
+  bottom: 50px;
+}
 
 .box_inputSearch_header {
   align-items: center;
   padding-left: 10px;
+
 
 
 
@@ -107,6 +123,8 @@ justify-content:space-between;
   background-color: #f5f5f5 ;
  border-radius: 20px;
  padding: 10px 15px;
+ outline: none;
+
 
 }
 
@@ -236,13 +254,18 @@ align-items: flex-start;
 }
 
 .box_categoryC1_nav_header_newEvidence {
-  background-color: rgb(244, 248, 247);
-  width: 100%;
+  background-color: rgb(244, 246, 246);
+
   font-size: 13px;
- display: flex;
- position: absolute;
- z-index: 2;
- top: 75px;
+  position: absolute;
+  left: 0px;
+
+
+
+
+
+
+
 
 }
 
@@ -252,6 +275,9 @@ align-items: flex-start;
   display: flex;
   justify-content: center;
   gap: 60px;
+
+
+
 }
 
 
@@ -266,5 +292,59 @@ align-items: flex-start;
 }
 .boxCAT1 li {
   line-height: 20px;
+}
+
+
+.box2_categoryC1_header {
+  display: flex;
+  gap: 10px;
+}
+
+
+/* search caixa de pesquisa*/
+
+.containerSearch {
+
+  position: relative;
+  top: 0px;
+
+}
+
+.containerSearch_item {
+  display: flex;
+ gap: 10px;
+
+
+ width: 100%;
+
+
+  background-color: rgb(23, 136, 136);
+  font-size: 13px;
+  position: absolute;
+  left: 0px;
+
+}
+
+.box_itemSearch {
+  width:290px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+
+
+
+}
+
+.box_itemSearch img{
+  width: 290px;
+  height: auto;
+}
+
+.box_info_item {
+  width: 290px;
+  padding: 10px 0;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
 }
 

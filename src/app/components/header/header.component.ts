@@ -8,6 +8,26 @@ import { Router } from '@angular/router';
   styleUrl: './header.component.css'
 })
 export class HeaderComponent {
+
+
+  showItem: boolean = false;
+
+   // Método chamado ao mover o mouse sobre a div
+   onMouseEnter() {
+    this.showItem = true;
+
+
+
+  }
+
+  // Método chamado ao sair com o mouse da div
+  onMouseLeave() {
+    this.showItem = false;
+
+
+  }
+
+
   constructor(private router: Router, private servizioService: ServizioService) {}
 
   verificarNovosProdutos() {
@@ -21,6 +41,7 @@ export class HeaderComponent {
       }
     });
   }
+
 
 
 }

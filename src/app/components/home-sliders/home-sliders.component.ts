@@ -9,6 +9,7 @@ import { ServizioService } from '../../services/servizio.service';
   styleUrl: './home-sliders.component.css'
 })
 export class HomeSlidersComponent {
+
   prodotti: Prodotto[] = [];
 
   constructor(private servizioService: ServizioService) {
@@ -19,5 +20,8 @@ export class HomeSlidersComponent {
   getProdotti(): void {
     this.servizioService.getAll().subscribe((prodotti) => (this.prodotti = prodotti));
   }
+
+
+
 
 }

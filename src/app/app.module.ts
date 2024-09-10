@@ -11,6 +11,7 @@ import { NextDirective } from './next.directive';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeSlidersComponent } from './components/home-sliders/home-sliders.component';
 import { NewArrivalsComponent } from './components/new-arrivals/new-arrivals.component';
+import { BannerHomeComponent } from './components/banner-home/banner-home.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { NewArrivalsComponent } from './components/new-arrivals/new-arrivals.com
     NextDirective,
     FooterComponent,
     HomeSlidersComponent,
-    NewArrivalsComponent
+    NewArrivalsComponent,
+    BannerHomeComponent,
   ],
   imports: [
 
