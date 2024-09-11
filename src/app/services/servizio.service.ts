@@ -16,9 +16,14 @@ export class ServizioService {
     return this.http.get<Prodotto[]>(this.apiURL)
   }
 
+  getProdottoById(id: number): Observable<any> {
+    return this.http.get<any>(`${this.apiURL}/${id}`);
+  }
+
   getNovosProdutos() {
     return this.http.get('http://localhost:3000/prodotti?nuovo_arrivi=true'); // Filtro para novos produtos
   }
+
 
 
 

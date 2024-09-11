@@ -1,51 +1,6 @@
 
-
-<div class="containerSearch">
-  <div class="search_input2" style="display: flex; ">
-    <button style="border: solid 1px transparent;cursor: pointer;">
-      <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" role="img" width="24px" height="24px" fill="none">
-        <path stroke="currentColor" stroke-width="1.5" d="M13.962 16.296a6.716 6.716 0 01-3.462.954 6.728 6.728 0 01-4.773-1.977A6.728 6.728 0 013.75 10.5c0-1.864.755-3.551 1.977-4.773A6.728 6.728 0 0110.5 3.75c1.864 0 3.551.755 4.773 1.977A6.728 6.728 0 0117.25 10.5a6.726 6.726 0 01-.921 3.407c-.517.882-.434 1.988.289 2.711l3.853 3.853">
-        </path>
-      </svg>
-    </button>
-    <input style="width: 100%; height: 40px;" type="text" id="searchInput" placeholder="Cerca">
-  </div>
-
-  <div  style="width: 100%; display: flex; justify-content: center;" class="containerSearch_item">
-
-    <div class="box_itemSearch">
-      <img src="https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/w_576,c_limit/64b7ce43-fe36-4a02-ae10-b8251a33d847/nike-just-do-it.jpg">
-      <div class="box_info_item">
-        <span>Nike Dunk</span>
-        <span>Scarpa Uomo</span>
-        <span>10 euros</span>
-      </div>
-    </div>
-    <div class="box_itemSearch">
-      <img src="https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/w_576,c_limit/64b7ce43-fe36-4a02-ae10-b8251a33d847/nike-just-do-it.jpg">
-      <div class="box_info_item">
-        <span>Nike Dunk</span>
-        <span>Scarpa Uomo</span>
-        <span>10 euros</span>
-      </div>
-    </div>
-    <div class="box_itemSearch">
-      <img src="https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/w_576,c_limit/64b7ce43-fe36-4a02-ae10-b8251a33d847/nike-just-do-it.jpg">
-      <div class="box_info_item">
-        <span>Nike Dunk</span>
-        <span>Scarpa Uomo</span>
-        <span>10 euros</span>
-      </div>
-    </div>
-    <div class="box_itemSearch">
-      <img src="https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/w_576,c_limit/64b7ce43-fe36-4a02-ae10-b8251a33d847/nike-just-do-it.jpg">
-      <div class="box_info_item">
-        <span>Nike Dunk</span>
-        <span>Scarpa Uomo</span>
-        <span>10 euros</span>
-      </div>
-    </div>
-  </div>
+<div  *ngIf="showHeaderSearch">
+  <app-header-search [searchQuery]="searchQuery"></app-header-search>
 </div>
 <div class="box_header">
 
@@ -155,13 +110,13 @@
 <div class="container_SearchHeader">
   <div class="box_inputSearch_header">
     <div>
-      <button>
+      <button (click)="toggleHeaderSearch()"  (click)="updateSearchQuery(searchBox.value)">
         <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" role="img" width="24px" height="24px" fill="none">
           <path stroke="currentColor" stroke-width="1.5" d="M13.962 16.296a6.716 6.716 0 01-3.462.954 6.728 6.728 0 01-4.773-1.977A6.728 6.728 0 013.75 10.5c0-1.864.755-3.551 1.977-4.773A6.728 6.728 0 0110.5 3.75c1.864 0 3.551.755 4.773 1.977A6.728 6.728 0 0117.25 10.5a6.726 6.726 0 01-.921 3.407c-.517.882-.434 1.988.289 2.711l3.853 3.853">
           </path>
         </svg>
       </button>
-      <input type="text" id="searchInput" placeholder="Cerca">
+      <input #searchBox type="text" id="searchInput" placeholder="Cerca">
     </div>
   </div>
 
@@ -187,7 +142,7 @@
 
 
 <div class="box_newArrivals_header">
-  <span><a routerLink="/nuovi-arrivi" >Tutti i nuovi arrivi</a></span>
+  <span><a routerLink="/dettaglio-prodotto/:id" >Tutti i nuovi arrivi</a></span>
   <a (click)="verificarNovosProdutos()" >Acquisita</a>
 </div>
 

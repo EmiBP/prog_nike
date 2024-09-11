@@ -1,1 +1,82 @@
-<p>dettaglio-prodotto works!</p>
+<!-- <div id="container_Main">
+  <section class="main_box2">
+    <img src="https://static.nike.com/a/images/f_auto/dpr_1.5,cs_srgb/h_750,c_limit/eaf5266c-cd88-41ef-824f-c21e160358c4/nike-just-do-it.png" alt="">
+  </section>
+  <section class="main_box3">
+    <div id="boxInfo1">
+      <h1 id="nome_prodotto" class="font">Nike Dunk</h1>
+      <h2  class="font">Scarpa-Uomo</h2>
+      <span id="prezzoSite">119,90</span>
+    </div>
+    <div id="boxInfo2">
+      <div id="boxInfo2_box1">
+        <span class="boxInfo2_span">Seleziona la taglia/misura</span>
+        <span class="boxInfo2_span colorLink"
+          >Guida alle taglie e alle misure</span
+        >
+      </div>
+
+      <div id="boxInfo2_taglie">
+        <button class="taglie_button"><span>EU 38.5</span></button>
+        <button class="taglie_button"><span>EU 39</span></button>
+        <button class="taglie_button"><span>EU 40</span></button>
+        <button class="taglie_button"><span>EU 40.5</span></button>
+        <button class="taglie_button"><span>EU 41</span></button>
+        <button class="taglie_button"><span>EU 42</span></button>
+        <button class="taglie_button"><span>EU 42.5</span></button>
+        <button class="taglie_button"><span>EU 43</span></button>
+        <button class="taglie_button"><span>EU 44</span></button>
+        <button class="taglie_button"><span>EU 44.5</span></button>
+        <button class="taglie_button"><span>EU 45</span></button>
+        <button class="taglie_button"><span>EU 45.5</span></button>
+        <button class="taglie_button"><span>EU 46</span></button>
+        <button class="taglie_button"><span>EU 47</span></button>
+        <button class="taglie_button"><span>EU 47.5</span></button>
+        <button class="taglie_button"><span>EU 48.5</span></button>
+        <button class="taglie_button"><span>EU 49.5</span></button>
+      </div>
+      <div id="tagliaSelected">hai scelto la taglia: <span></span></div>
+      <div id="alert_container">devi sceliere la taglia </div>
+
+      <div id="container_taglie">
+        <button class="buttonAddCarello buttonBuy color">
+          <span>Aggiungi al carello</span>
+        </button>
+        <button class="buttonBuy">
+          <span>Aggiungi ai preferiti &#9825;</span>
+        </button>
+      </div>
+    </div>
+    <div class="container" style="display: none;">
+      <div class="container_boxCarrello">
+        <div class="box-1">
+          <img class="box-img1" src="icon/icons8-checkmark.svg" alt="" />
+          <span id="addCarrello">Aggiunto al carrello </span>
+          <img class="box-img2" src="icon/icons8-delete.svg" alt="" />
+        </div>
+        <img class="box-img3 left" src="Scarpa_2/3.jpg" alt="" />
+        <div class="box-2 diviso2 right">
+          <h3 id="prodotto">Scarpa Nike Air Max Dn</h3>
+          <span>Taglia/Misura</span>
+          <span id="taglia">EU 43</span>
+          <span id="prezzo">150,00</span>
+        </div>
+        <div class="box-3 pulire">
+          <button>Visualizza carrello (<span></span>)</button>
+          <button><span>Pagamento</span></button>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+</div> -->
+
+
+<div *ngIf="prodotto" style="background-color: blueviolet; width: 100%; height: 900px;">
+  <h2>{{ prodotto.nome }}</h2>
+  <p>{{ prodotto.descrizione }}</p>
+  <p>Categoria: {{ prodotto.categoria }}</p>
+  <p>Prezzo: €{{ prodotto.prezzo }}</p>
+  <img [src]="prodotto.immagine" alt="{{ prodotto.nome }}">
+</div>

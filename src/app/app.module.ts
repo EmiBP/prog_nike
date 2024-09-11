@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
-
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HttpClientModule} from '@angular/common/http';
 import { HeaderComponent } from './components/header/header.component';
@@ -13,6 +13,7 @@ import { HomeSlidersComponent } from './components/home-sliders/home-sliders.com
 import { NewArrivalsComponent } from './components/new-arrivals/new-arrivals.component';
 import { BannerHomeComponent } from './components/banner-home/banner-home.component';
 import { DettaglioProdottoComponent } from './components/dettaglio-prodotto/dettaglio-prodotto.component';
+import { HeaderSearchComponent } from './components/header-search/header-search.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,9 @@ import { DettaglioProdottoComponent } from './components/dettaglio-prodotto/dett
     NewArrivalsComponent,
     BannerHomeComponent,
     DettaglioProdottoComponent,
+    HeaderSearchComponent,
+
+
   ],
   imports: [
 
@@ -32,6 +36,7 @@ import { DettaglioProdottoComponent } from './components/dettaglio-prodotto/dett
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

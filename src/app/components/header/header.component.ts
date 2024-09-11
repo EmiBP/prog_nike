@@ -1,6 +1,8 @@
+import { query } from '@angular/animations';
 import { ServizioService } from './../../services/servizio.service';
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-header',
@@ -10,7 +12,13 @@ import { Router } from '@angular/router';
 export class HeaderComponent {
 
 
+  showHeaderSearch: boolean = false;
+
+  searchQuery: string = '';
   showItem: boolean = false;
+  inputSearch: any;
+
+
 
    // Método chamado ao mover o mouse sobre a div
    onMouseEnter() {
@@ -42,6 +50,15 @@ export class HeaderComponent {
     });
   }
 
+  toggleHeaderSearch(): void {
+    this.showHeaderSearch = !this.showHeaderSearch;
+
+  }
+
+  // Função para atualizar o valor de busca
+  updateSearchQuery(query: string): void {
+    this.searchQuery = query;
+  }
 
 
 }

@@ -1,0 +1,131 @@
+/* ------Index2---------
+
+#container_Main {
+	margin: 0 auto;
+	width: 70%;
+	height: 30px;
+	margin-top: 30px;
+
+}
+
+.main_box2,
+.main_box3 {
+	width: calc(100% / 2);
+	float: left;
+}
+
+
+Main 2*/
+
+/* .main_box2 img {
+	width: 300px;
+	height: auto;
+}
+
+
+.main_box2 div button img {
+	width: 50%;
+	height: auto;
+}
+
+
+.main_box3 {
+	width: calc(100% / 3);
+	padding: 0 10px;
+	height: auto;
+}
+
+.font {
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.boxInfo2_span1,
+.boxInfo2_span2 {
+	padding: 10px 0;
+	float: left;
+	font-size: 13px;
+	font-weight: 600;
+}
+
+#boxInfo1 {
+	padding: 0 10px;
+	margin-bottom: 12px;
+}
+#boxInfo1 span {
+	font-size: 10px;
+	font-weight: 600;
+}
+
+#boxInfo2 {
+	overflow: hidden;
+	padding: 0 10px;
+}
+
+#boxInfo2_box1 {
+	font-size: 12px;
+	font-weight: 600;
+	width: 100%;
+	height: 50px;
+}
+
+.boxInfo2_span {
+	width: calc(100% / 2);
+	float: left;
+}
+
+#boxInfo2_taglie {
+	margin-bottom: 6px;
+}
+
+.taglie_button {
+	border: 1px solid rgb(180, 175, 175);
+	border-radius: 2px;
+	width: 31%;
+	height: auto;
+	padding: 5px;
+	margin-bottom: 5px;
+}
+
+#tagliaSelected, #alert_container {
+	display: none;
+	font-size: 12px;
+	padding: 8px 0;
+}
+#boxInfo2_taglie button span {
+	font-size: 12px;
+	font-weight: 600;
+}
+
+.color {
+	background-color: #1a1919;
+	color: aliceblue;
+}
+
+.colorLink {
+	font-size: 10px;
+	color: rgb(108, 92, 89);
+}
+
+.buttonBuy {
+	width: 110%;
+	height: 25px;
+	margin: 3px 0;
+	border-radius: 100px;
+	border: transparent;
+}
+
+.buttonBuy span {
+	font-size: 10px;
+	line-height: 25px;
+}
+
+#container_taglie {
+	margin: 0 auto;
+	width: 50%;
+}
+
+
+::-webkit-scrollbar {
+    width: 0px;
+} */
