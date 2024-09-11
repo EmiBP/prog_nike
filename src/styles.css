@@ -98,13 +98,12 @@ display: flex;
 .container_SearchHeader {
   display: flex;
   align-items: center;
-  background-color: aqua;
+
   flex-direction: row;
   justify-content: flex-end;
   padding-right: 10px;
   height: 0;
-  position: relative;
-  bottom: 50px;
+
 }
 
 .box_inputSearch_header {
@@ -303,12 +302,6 @@ align-items: flex-start;
 
 /* search caixa de pesquisa*/
 
-.containerSearch {
-
-  position: relative;
-  top: 0px;
-
-}
 
 .containerSearch_item {
   display: flex;
@@ -318,7 +311,7 @@ align-items: flex-start;
  width: 100%;
 
 
-  background-color: rgb(23, 136, 136);
+  background-color: rgb(250, 253, 253);
   font-size: 13px;
   position: absolute;
   left: 0px;
@@ -326,6 +319,7 @@ align-items: flex-start;
 }
 
 .box_itemSearch {
+
   width:290px;
   height: auto;
   display: flex;

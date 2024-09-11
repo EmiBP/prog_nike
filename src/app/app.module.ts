@@ -12,6 +12,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeSlidersComponent } from './components/home-sliders/home-sliders.component';
 import { NewArrivalsComponent } from './components/new-arrivals/new-arrivals.component';
 import { BannerHomeComponent } from './components/banner-home/banner-home.component';
+import { DettaglioProdottoComponent } from './components/dettaglio-prodotto/dettaglio-prodotto.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { BannerHomeComponent } from './components/banner-home/banner-home.compon
     HomeSlidersComponent,
     NewArrivalsComponent,
     BannerHomeComponent,
+    DettaglioProdottoComponent,
   ],
   imports: [
 
