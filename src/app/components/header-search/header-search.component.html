@@ -1,4 +1,4 @@
-<div class="containerSearch" style="height: 100px; background-color: black;"   *ngIf="showComponentA">
+<div class="containerSearch"  *ngIf="showComponentA">
   <div class="search_input2" style="display: flex;">
     <button (click)="onSearch()" style="border: solid 1px transparent; cursor: pointer;">
       <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" role="img" width="24px" height="24px" fill="none">
@@ -7,7 +7,7 @@
         </path>
       </svg>
     </button>
-    <input [formControl]="queryField" [value]="searchQuery"  style="width: 100%; height: 40px;" type="text" id="searchInput" placeholder="Cerca">
+    <input [formControl]="queryField" style="width: 100%; height: 40px;" type="text" id="searchInput" placeholder="Cerca">
   </div>
 
   <div style="width: 100%; height: 300px; display: flex; justify-content: center;" class="containerSearch_item">

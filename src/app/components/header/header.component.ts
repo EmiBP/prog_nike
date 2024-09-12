@@ -13,8 +13,6 @@ export class HeaderComponent {
 
 
   showHeaderSearch: boolean = false;
-
-  searchQuery: string = '';
   showItem: boolean = false;
   inputSearch: any;
 
@@ -55,10 +53,6 @@ export class HeaderComponent {
 
   }
 
-  // Função para atualizar o valor de busca
-  updateSearchQuery(query: string): void {
-    this.searchQuery = query;
-  }
 
 
 }

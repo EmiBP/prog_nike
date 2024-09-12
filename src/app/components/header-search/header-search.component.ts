@@ -13,8 +13,6 @@ import { map, startWith } from 'rxjs/operators';
 export class HeaderSearchComponent implements OnInit {
 
 
-  @Input() searchQuery: string = '';
-
 
   queryField: FormControl = new FormControl(); // Controlador para o input de busca
   results$!: Observable<any>; // Para armazenar os resultados
