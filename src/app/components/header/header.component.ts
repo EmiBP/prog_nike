@@ -23,7 +23,11 @@ export class HeaderComponent {
 
 
   ngOnInit(): void {
-    this.aggiornaNumeroProdottiCarrello();
+    // Inscreva-se para ouvir mudanças no carrinho
+    this.servizioService.getCarrelloObservable().subscribe((prodottiCarrello) => {
+      // Atualize o número de itens no carrinho
+      this.numeroProdottiCarrello = prodottiCarrello.reduce((total, item) => total + item.quantita, 0);
+    });
   }
 
   aggiornaNumeroProdottiCarrello() {

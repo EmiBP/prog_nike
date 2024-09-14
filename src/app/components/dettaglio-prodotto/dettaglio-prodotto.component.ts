@@ -17,6 +17,9 @@ export class DettaglioProdottoComponent implements OnInit {
   mostraCarrello: boolean = false;
   deveRedirecionar: boolean = true;
 
+  prodottoSelezionato: any;
+  quantita: number = 1;
+
   constructor(private route: ActivatedRoute, private servizioService: ServizioService, private router: Router) {}
 
   ngOnInit(): void {
@@ -53,11 +56,13 @@ export class DettaglioProdottoComponent implements OnInit {
     console.log('Aggiunto al carrello', this.prodotto, this.tagliaSelezionata, this.coloreSelezionato);
 
     // Adiciona o produto ao serviço de carrinho
-    this.servizioService.addProdottoCarrello({
+    const prodottoConDettagli = {
       ...this.prodotto,
       taglia: this.tagliaSelezionata,
       colore: this.coloreSelezionato
-    }, 1);  // Quantidade padrão como 1, você pode ajustar conforme necessário
+    };
+
+    this.servizioService.addProdottoCarrello(prodottoConDettagli, this.quantita);  // Usando a quantidade correta
 
     setTimeout(() => {
       if (this.deveRedirecionar) {
