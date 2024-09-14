@@ -15,6 +15,26 @@ export class HeaderComponent {
   showHeaderSearch: boolean = false;
   showItem: boolean = false;
   inputSearch: any;
+  numeroProdottiCarrello: number = 0;
+
+
+
+  constructor(private router: Router, private servizioService: ServizioService) {}
+
+
+  ngOnInit(): void {
+    this.aggiornaNumeroProdottiCarrello();
+  }
+
+  aggiornaNumeroProdottiCarrello() {
+    const prodotti = this.servizioService.getProdottiCarrello();
+    this.numeroProdottiCarrello = prodotti.reduce((total, item) => total + item.quantita, 0);
+  }
+
+
+  vaiAlCarrello() {
+    this.router.navigate(['/carrello']);
+  }
 
 
 
@@ -34,7 +54,15 @@ export class HeaderComponent {
   }
 
 
-  constructor(private router: Router, private servizioService: ServizioService) {}
+
+
+
+
+  selezionaSport(categoria: string) {
+    this.router.navigate(['/sport', categoria]);
+  }
+
+
 
   verificarNovosProdutos() {
     this.servizioService.getNovosProdutos().subscribe((response: any) => {
@@ -51,6 +79,13 @@ export class HeaderComponent {
   toggleHeaderSearch(): void {
     this.showHeaderSearch = !this.showHeaderSearch;
 
+  }
+
+  // Método para redirecionar e fechar o menu
+  navegaEFecha(url: string): void {
+    this.router.navigate([url]).then(() => {
+      this.showItem = false;  // Fecha o menu
+    });
   }
 
 

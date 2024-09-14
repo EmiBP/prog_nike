@@ -1,0 +1,73 @@
+<div id="container_carrello">
+  <h3 class="misura_text">Carrello</h3>
+  <div id="box-sinistra" *ngFor="let item of prodottiCarrello">
+    <section class="sec2">
+      <div class="box1">
+        <img id="img_scarpa" [src]="item.prodotto.immagine" alt="{{ item.prodotto.nome }}" />
+        <p>Ritiro gratuito</p>
+        <a href="#">Trova un negozio</a>
+      </div>
+      <div class="box2">
+        <h2 class="nome_prodottoPag4">{{ item.prodotto.nome }}</h2>
+        <span>Taglia: {{ item.prodotto.taglia }}</span>
+        <span>Colore: {{ item.prodotto.colore }}</span>
+        <span>{{ item.prodotto.prezzo }}</span>
+
+        <div class="box_size">
+          <label for="size-select">Taglia/misura</label>
+          <select name="size" id="size-select">
+             <option *ngFor="let taglia of item.prodotto.taglie_disponibili" [value]="taglia">{{ taglia }}</option>
+
+          </select>
+        </div>
+        <div class="box_quantita">
+          <label for="quantita-select">Quantità</label>
+          <select name="quantita" id="quantita-select" [(ngModel)]="item.quantita">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+        <div class="box_img">
+          <div id="cuore">
+           <button style="background-color: transparent; border: transparent;"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" role="img" width="24px" height="24px" fill="none"><path stroke="currentColor" stroke-width="1.5" d="M16.794 3.75c1.324 0 2.568.516 3.504 1.451a4.96 4.96 0 010 7.008L12 20.508l-8.299-8.299a4.96 4.96 0 010-7.007A4.923 4.923 0 017.205 3.75c1.324 0 2.568.516 3.504 1.451l.76.76.531.531.53-.531.76-.76a4.926 4.926 0 013.504-1.451"></path></svg></button>
+          </div>
+          <div id="trash">
+            <button style="background-color: transparent; border: transparent;"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" role="img" width="24px" height="24px" fill="none"><path stroke="currentColor" stroke-miterlimit="10" stroke-width="1.5" d="M14.25 7.5v12m-4.5-12v12M5.25 6v13.5c0 1.24 1.01 2.25 2.25 2.25h9c1.24 0 2.25-1.01 2.25-2.25V5.25m0 0h2.75m-2.75 0H21m-12-3h5.25c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5H3"></path></svg></button>
+          </div>
+        </div>
+      </div>
+      <div class="box3">
+        <span class="prezzo">{{ item.prodotto.prezzo }}</span>
+      </div>
+
+      <div class="box4"></div>
+    </section>
+
+  </div>
+  <div id="box-destra">
+    <section class="sec4">
+      <h3>Riepilogo</h3>
+      <div class="box-destra-1">
+        <span>Subtotale</span>
+        <span>""</span>
+      </div>
+      <div class="box-destra-2">
+        <span>Costi di soeduzione e gestione previsti</span>
+        <span>Gratis</span>
+      </div>
+      <div class="box-destra-3">
+        <span>Totale</span>
+        <span>""</span>
+      </div>
+    </section>
+    <section class="sec5">
+      <button id="neroButton"><span>Vai al pagamento</span></button>
+      <button id="whiteButton">
+        <img  src="https://www.nike.com/assets/experience/pet/payment-icons/paypal@2x.png" alt="" />
+      </button>
+    </section>
+  </div>
+</div>

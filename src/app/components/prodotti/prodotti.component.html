@@ -1,6 +1,5 @@
-<h2 class="h2_titolo">Nuovi Arrivi Nike</h2>
-<div id="container_new_arrivals">
-
+<h2 class="h2_titolo">Tutti i prodotti</h2>
+<div id="container_prodotti">
   <div id="filtro">
     <h3>Filtri</h3>
     <div class="filtro_opzione">
@@ -24,7 +23,7 @@
   </div>
 
   <div id="lista_prodotti">
-    <div style="cursor: pointer;" class="prodotto" *ngFor="let prodotto of prodottiVisualizzati" (click)="onItemClick(prodotto.id)">
+    <div class="prodotto" *ngFor="let prodotto of prodottiVisualizzati" (click)="onItemClick(prodotto.id)">
       <img [src]="prodotto.immagine" alt="{{ prodotto.nome }}" />
       <h4>{{ prodotto.nome }}</h4>
       <p>{{ prodotto.prezzo | currency:'EUR' }}</p>

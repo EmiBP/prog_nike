@@ -1,0 +1,21 @@
+<h2 class="h2_titolo" *ngIf="categoriaSelezionata">Categoria: {{ categoriaSelezionata }}</h2>
+<div id="container_prodotti">
+  <div id="filtro">
+    <h3>Filtri</h3>
+    <div class="filtro_opzione">
+      <h4>Categorie</h4>
+      <ul>
+        <li *ngFor="let categoria of categorie" (click)="selezionaCategoria(categoria)" [class.selezionato]="categoria === categoriaSelezionata">{{ categoria }}</li>
+      </ul>
+    </div>
+  </div>
+
+  <div id="lista_prodotti">
+    <p *ngIf="prodottiVisualizzati.length === 0">Non ci sono prodotti per la categoria {{ categoriaSelezionata }}.</p>
+    <div class="prodotto" *ngFor="let prodotto of prodottiFiltrati" (click)="onItemClick(prodotto.id)">
+      <img [src]="prodotto.immagine" alt="{{ prodotto.nome }}" />
+      <h4>{{ prodotto.nome }}</h4>
+      <p>{{ prodotto.prezzo | currency:'EUR' }}</p>
+    </div>
+  </div>
+</div>

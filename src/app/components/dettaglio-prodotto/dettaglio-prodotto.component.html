@@ -7,6 +7,23 @@
       <h1 id="nome_prodotto">{{prodotto.nome}}</h1>
       <span id="prezzoSite">{{prodotto.prezzo}}</span>
     </div>
+    <div class="colori_prodotti">
+      <span>Seleziona un colore</span>
+      <div style="display: flex; gap: 10px;" class="colori_options">
+        <button
+          *ngFor="let colore of prodotto.colori_disponibili"
+          class="colore_button"
+          (click)="selezionaColore(colore)"
+        >
+          <span>{{ colore }}</span>
+        </button>
+      </div>
+      <div *ngIf="coloreSelezionato" class="divStyleScelta">Hai scelto il colore: <span>{{ coloreSelezionato }}</span></div>
+      <div *ngIf="erroreColore" class="error-scelta" style="color: brown;">
+        devi scegliere il colore
+      </div>
+
+    </div>
     <div id="boxInfo2">
       <div id="boxInfo2_box1">
         <span>Seleziona la taglia/misura</span>
@@ -16,29 +33,20 @@
       </div>
 
       <div id="boxInfo2_taglie">
-        <button class="taglie_button"><span>EU 38.5</span></button>
-        <button class="taglie_button"><span>EU 39</span></button>
-        <button class="taglie_button"><span>EU 40</span></button>
-        <button class="taglie_button"><span>EU 40.5</span></button>
-        <button class="taglie_button"><span>EU 41</span></button>
-        <button class="taglie_button"><span>EU 42</span></button>
-        <button class="taglie_button"><span>EU 42.5</span></button>
-        <button class="taglie_button"><span>EU 43</span></button>
-        <button class="taglie_button"><span>EU 44</span></button>
-        <button class="taglie_button"><span>EU 44.5</span></button>
-        <button class="taglie_button"><span>EU 45</span></button>
-        <button class="taglie_button"><span>EU 45.5</span></button>
-        <button class="taglie_button"><span>EU 46</span></button>
-        <button class="taglie_button"><span>EU 47</span></button>
-        <button class="taglie_button"><span>EU 47.5</span></button>
-        <button class="taglie_button"><span>EU 48.5</span></button>
-        <button class="taglie_button"><span>EU 49.5</span></button>
+        <button
+          *ngFor="let taglia of prodotto.taglie_disponibili"
+          class="taglie_button"
+          [class.selected]="taglia === tagliaSelezionata"
+          (click)="selezionaTaglia(taglia)"
+        >
+          <span>{{ taglia }}</span>
+        </button>
       </div>
-      <div class="divStyleScelta">hai scelto la taglia: <span></span></div>
-      <div class="divStyleScelta">devi sceliere la taglia </div>
+      <div *ngIf="tagliaSelezionata" class="divStyleScelta">hai scelto la taglia: <span>{{ tagliaSelezionata }}</span></div>
+      <div *ngIf="erroreTaglia" class="error-scelta" style="color: brown;">devi sceliere la taglia </div>
 
       <div id="container_taglie">
-        <button class="buttonAddCarello">
+        <button class="buttonAddCarello" (click)="aggiungiAlCarrello()">
           <span>Aggiungi al carello</span>
         </button>
         <button class="buttonBuy">
@@ -46,18 +54,21 @@
         </button>
       </div>
     </div>
-    <div class="container" style="display: none;">
+    <div class="container" *ngIf="mostraCarrello">
       <div class="container_boxCarrello">
+        <div><button class="close_div" (click)="chiudiCarrello()">chiudi</button></div>
         <div class="box-1">
           <img class="box-img1" src="icon/icons8-checkmark.svg" alt="" />
           <span id="addCarrello">Aggiunto al carrello </span>
           <img class="box-img2" src="icon/icons8-delete.svg" alt="" />
         </div>
-        <img class="box-img3 left" [src]="prodotto.immagine" alt="{{ prodotto.nome }}" />
+        <img class="box-img3" [src]="prodotto.immagine" alt="{{ prodotto.nome }}" />
         <div class="box-2">
           <h3 id="prodotto">{{prodotto.nome}}</h3>
           <span>Taglia/Misura</span>
-          <span id="taglia">{{prodotto.taglia}}</span>
+          <span id="taglia" *ngIf="tagliaSelezionata">{{ tagliaSelezionata }}</span>
+          <span>Colore</span>
+          <span id="colore" *ngIf="coloreSelezionato">{{ coloreSelezionato }}</span>
           <span id="prezzo">{{prodotto.prezzo}}</span>
         </div>
         <div class="box-3">

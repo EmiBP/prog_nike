@@ -55,13 +55,13 @@
     <nav>
       <ul>
         <li>
-          <a  (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">Novità e in evidenza</a>
+          <a  (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()" style="cursor: pointer;">Novità e in evidenza</a>
           <div  style="width: 100%;" class="box_categoryC1_nav_header_newEvidence" *ngIf="showItem" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()" >
             <div class="boxCAT1" *ngIf="showItem">
               <div class="box_inEvidenza">
                 <p>In evidenza</p>
                 <ul>
-                  <li><a href="" routerLink="/nuovi-arrivi">Tutti i nuovi arrivi</a></li>
+                  <li><a style="cursor: pointer;" (click)="navegaEFecha('/nuovi-arrivi')">Tutti i nuovi arrivi</a></li>
                   <li><a href="">Best seller</a></li>
                 </ul>
               </div>
@@ -80,15 +80,15 @@
               <div class="box_scopriSport">
                 <p>Scopri lo sport</p>
                 <ul>
-                  <li>Calcio</li>
-                  <li>Running</li>
-                  <li>Basket</li>
-                  <li>Fitness</li>
-                  <li>Golf</li>
-                  <li>Tennis</li>
-                  <li>Yoga</li>
-                  <li>Danza</li>
-                  <li>Skateboard</li>
+                  <li (click)="navegaEFecha('/sport/Calcio')">Calcio</li>
+                  <li (click)="navegaEFecha('/sport/Running')">Running</li>
+                  <li (click)="navegaEFecha('/sport/Basket')">Basket</li>
+                  <li (click)="navegaEFecha('/sport/Fitness')">Fitness</li>
+                  <li (click)="navegaEFecha('/sport/Golf')">Golf</li>
+                  <li (click)="navegaEFecha('/sport/Tennis')">Tennis</li>
+                  <li (click)="navegaEFecha('/sport/Yoga')">Yoga</li>
+                  <li (click)="navegaEFecha('/sport/Danza')">Danza</li>
+                  <li (click)="navegaEFecha('/sport/Skateboard')">Skateboard</li>
                 </ul>
               </div>
             </div>
@@ -109,8 +109,8 @@
 <!-- aqui está o input de busca do header -->
 <div class="container_SearchHeader">
   <div class="box_inputSearch_header">
-    <div>
-      <button (click)="toggleHeaderSearch()" >
+    <div class="search-wrapper">
+      <button (click)="toggleHeaderSearch()">
         <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" role="img" width="24px" height="24px" fill="none">
           <path stroke="currentColor" stroke-width="1.5" d="M13.962 16.296a6.716 6.716 0 01-3.462.954 6.728 6.728 0 01-4.773-1.977A6.728 6.728 0 013.75 10.5c0-1.864.755-3.551 1.977-4.773A6.728 6.728 0 0110.5 3.75c1.864 0 3.551.755 4.773 1.977A6.728 6.728 0 0117.25 10.5a6.726 6.726 0 01-.921 3.407c-.517.882-.434 1.988.289 2.711l3.853 3.853">
           </path>
@@ -120,20 +120,20 @@
     </div>
   </div>
 
-
-
-  <!-- final do input de busca -->
-
-  <!-- inicio icons de busca -->
-
   <div class="box_icons_header">
-    <a href="">
-      <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24"   role="img" width="24px" height="24px" fill="none">
+    <!-- Ícone de coração para favoritos -->
+    <a href="" class="icon-favorites">
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" role="img" width="24px" height="24px" fill="none">
         <path stroke="currentColor" stroke-width="1.5" d="M16.794 3.75c1.324 0 2.568.516 3.504 1.451a4.96 4.96 0 010 7.008L12 20.508l-8.299-8.299a4.96 4.96 0 010-7.007A4.923 4.923 0 017.205 3.75c1.324 0 2.568.516 3.504 1.451l.76.76.531.531.53-.531.76-.76a4.926 4.926 0 013.504-1.451"></path>
       </svg>
     </a>
-    <a href="">
-      <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" role="img" width="24px" height="24px" fill="none"><path stroke="currentColor" stroke-width="1.5" d="M8.25 8.25V6a2.25 2.25 0 012.25-2.25h3a2.25 2.25 0 110 4.5H3.75v8.25a3.75 3.75 0 003.75 3.75h9a3.75 3.75 0 003.75-3.75V8.25H17.5"></path></svg>
+
+    <!-- Ícone de bolsa para o carrinho -->
+    <a (click)="vaiAlCarrello()" class="icon-cart">
+      <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" role="img" width="24px" height="24px" fill="none">
+        <path stroke="currentColor" stroke-width="1.5" d="M8.25 8.25V6a2.25 2.25 0 012.25-2.25h3a2.25 2.25 0 110 4.5H3.75v8.25a3.75 3.75 0 003.75 3.75h9a3.75 3.75 0 003.75-3.75V8.25H17.5"></path>
+      </svg>
+      <span class="cart-count">{{ numeroProdottiCarrello }}</span> <!-- Número de itens no carrinho -->
     </a>
   </div>
 </div>
@@ -141,9 +141,9 @@
 
 
 
-<div class="box_newArrivals_header">
-  <span><a routerLink="/dettaglio-prodotto/:id" >Tutti i nuovi arrivi</a></span>
-  <a (click)="verificarNovosProdutos()" >Acquisita</a>
+
+<div class="box_prodotti_header">
+  <a routerLink="/tutti-prodotti">Acquisita</a>
 </div>
 
 

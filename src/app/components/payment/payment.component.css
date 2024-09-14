@@ -1,0 +1,154 @@
+
+#container {
+	margin: 0 auto;
+	width: 50%;
+}
+.p-box1_sec1 {
+	margin-bottom: 15px;
+}
+
+.p-box1_sec1 > h3 {
+	font-size: 18px;
+	color: rgb(41, 40, 40);
+
+	padding: 20px 0;
+}
+
+.p-box1_sec1 > span {
+	display: block;
+	margin: 6px 0;
+}
+
+/*-------------box1 sec 2*/
+.p-box1_sec2 {
+	margin-bottom: 15px;
+}
+
+.p-box1_sec2 span {
+	position: relative;
+	top: -2px;
+}
+
+.box1_sec2Img {
+	width: 20%;
+	height: auto;
+}
+
+/*----------------Sec IMG*/
+
+.p-box1_sec3 > label {
+	display: block;
+	margin-bottom: 15px;
+}
+
+.p-box1_sec3 > div {
+	margin-bottom: 15px;
+}
+
+/*   -----------------*/
+#card {
+	width: 5%;
+	margin-right: 5px;
+	position: relative;
+	top: 3.5px;
+}
+
+/*pagamento box1 sec4*/
+.p-box1_sec4 {
+	border-radius: 5px;
+	border: solid black 1px;
+	min-height: 100px;
+	padding: 10px;
+}
+
+.p-box1_sec4 label {
+	display: block;
+	padding-bottom: 10px;
+}
+
+.p-box1_sec4_1 {
+	border-radius: 5px;
+	border: solid rgb(50, 49, 49) 1px;
+	width: 48%;
+}
+
+.p-box1_sec4_1 input {
+	border: transparent;
+	width: 85%;
+	min-height: 32px;
+}
+
+#lock {
+	position: relative;
+	top: 2px;
+	right: -8px;
+	width: 13px;
+}
+
+.sec4_2_3 {
+	width: 50%;
+}
+
+.sec4_2_3 input {
+	min-height: 33.8px;
+	border-radius: 5px;
+	width: 48%;
+	padding: 0 10px;
+
+	border: solid rgb(50, 49, 49) 1px;
+}
+
+.input2Sec4_2 {
+	padding: 0 10px;
+}
+
+/* ----------------pagamento Box2 */
+
+.pag_box2 img {
+	width: 45%;
+}
+
+#p-box2 h3 {
+	color: rgb(62, 55, 55);
+	margin-bottom: 5px;
+}
+
+#p-box2 div span {
+	display: block;
+
+	margin-bottom: 2px;
+	font-size: 9px;
+}
+
+.infoMyCvv {
+	display: inline-block;
+	padding: 30px 0 0 0;
+}
+
+/*tutto*/
+.right {
+	float: right;
+}
+
+.left {
+	float: left;
+}
+
+.diviso2 {
+	width: calc(100% / 2);
+}
+
+.underline {
+	text-decoration: underline;
+}
+.width70 {
+	width: 70%;
+}
+
+.width30 {
+	width: 30%;
+}
+
+.pulire {
+	clear: both;
+}

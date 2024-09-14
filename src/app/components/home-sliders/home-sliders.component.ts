@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Prodotto } from '../../models/Prodotto';
 import { ServizioService } from '../../services/servizio.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -12,7 +13,7 @@ export class HomeSlidersComponent {
 
   prodotti: Prodotto[] = [];
 
-  constructor(private servizioService: ServizioService) {
+  constructor(private servizioService: ServizioService, private router: Router) {
     this.getProdotti()
 
   }
@@ -21,6 +22,10 @@ export class HomeSlidersComponent {
     this.servizioService.getAll().subscribe((prodotti) => (this.prodotti = prodotti));
   }
 
+
+  onItemClick(id: number) {
+    this.router.navigate([`/dettaglio-prodotto/${id}`]);
+  }
 
 
 

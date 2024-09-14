@@ -486,7 +486,7 @@
         "categoria": "Running",
         "prezzo": 99.99,
         "nuovo_arrivi": false,
-        "taglie_disponibili": ["38", "39", "40", "41", "42", "43", "44", "45"],
+        "taglie_disponibili": ["36", "37", "38", "39", "40", "41", "42", "43", "44", "45"],
         "colori_disponibili": ["Nero", "Bianco", "Blu", "Rosso", "Grigio"],
         "descrizione": "Le Nike Free RN 5.0 sono scarpe da corsa leggere e flessibili, ideali per allenamenti e percorsi naturali.",
         "immagine": "link_all'immagine.jpg"

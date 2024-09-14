@@ -14,6 +14,11 @@ import { NewArrivalsComponent } from './components/new-arrivals/new-arrivals.com
 import { BannerHomeComponent } from './components/banner-home/banner-home.component';
 import { DettaglioProdottoComponent } from './components/dettaglio-prodotto/dettaglio-prodotto.component';
 import { HeaderSearchComponent } from './components/header-search/header-search.component';
+import { CarrelloComponent } from './components/carrello/carrello.component';
+import { PaymentComponent } from './components/payment/payment.component';
+import { ConsengaComponent } from './components/consenga/consenga.component';
+import { ProdottiComponent } from './components/prodotti/prodotti.component';
+import { SportComponent } from './components/sport/sport.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +32,11 @@ import { HeaderSearchComponent } from './components/header-search/header-search.
     BannerHomeComponent,
     DettaglioProdottoComponent,
     HeaderSearchComponent,
+    CarrelloComponent,
+    PaymentComponent,
+    ConsengaComponent,
+    ProdottiComponent,
+    SportComponent,
 
 
   ],

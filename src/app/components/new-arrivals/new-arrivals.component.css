@@ -1,38 +1,72 @@
-.h1_news {
- margin: 15px;
- display: inline-block;
-}
-.containerNewsArrivals{
+#container_new_arrivals {
   display: flex;
-  justify-content: center;
   gap: 20px;
-}
-.container1{
-  width: 200px;
-  background-color: rgb(251, 236, 236);
+  padding: 20px;
 }
 
-.container2 {
-  display: flex;
-  gap: 10px;
-  justify-content: flex-start;
-  max-width: 1100px;
-  min-height: 800px;
-  flex-wrap: wrap;
-
-
-
+#filtro {
+  width: 20%;
+  border-right: 1px solid #ddd;
 }
 
-.prodotti_news img {
-
-  max-width: 350px;
+.filtro_opzione h4 {
+  margin-bottom: 10px;
 }
 
-.news_shoesBloco_info {
-  font-size: black;
-  display: flex;
-  flex-direction: column;
+.filtro_opzione ul {
+  list-style: none;
+  padding-left: 0;
 }
 
+.filtro_opzione li {
+  cursor: pointer;
+  padding: 5px 0;
+  border-bottom: 1px solid #ddd;
+}
 
+.filtro_opzione li:hover,
+.filtro_opzione li.selezionato {
+  background-color: #ddd;
+}
+
+.button-reset {
+  margin-top: 20px;
+  background-color: rgb(226, 212, 212);
+  color: rgb(7, 6, 6);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+#lista_prodotti {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 80%;
+}
+
+.prodotto {
+  border: 1px solid transparent;
+  padding: 10px;
+  text-align: center;
+}
+
+.prodotto img {
+  max-width: 100%;
+  height: auto;
+}
+
+.button-load-more {
+  grid-column: span 3;
+  text-align: center;
+}
+
+.button-load-more button {
+  background-color: rgb(226, 212, 212);
+  color: rgb(7, 6, 6);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 8px;
+}

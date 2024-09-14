@@ -87,7 +87,7 @@ display: flex;
 
 
 .box_categoryC1_nav_header li a {
-  font-weight: 600;
+
   color: rgb(39, 38, 38);
 
 
@@ -97,49 +97,69 @@ display: flex;
 
 .container_SearchHeader {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-
-  flex-direction: row;
-  justify-content: flex-end;
-  padding-right: 10px;
-  height: 0;
-
+  padding: 10px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
 }
 
-.box_inputSearch_header {
+.box_inputSearch_header .search-wrapper {
+  display: flex;
   align-items: center;
-  padding-left: 10px;
-
-
-
-
-
 }
 
-
-.box_inputSearch_header input{
-  border: solid 1px transparent;
-  background-color: #f5f5f5 ;
- border-radius: 20px;
- padding: 10px 15px;
- outline: none;
-
-
-}
-
-.box_inputSearch_header {
-  border-radius: 20px;
-  border: solid 1px transparent;
-  background-color: #f5f5f5;;
+.box_inputSearch_header input {
+  width: 300px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-left: 10px;
 }
 
 .box_icons_header {
-  gap: 10px;
+  display: flex;
+  align-items: center;
 }
 
-/* box arrivals */
+.box_icons_header a {
+  position: relative;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
 
-.box_newArrivals_header  {
+.box_icons_header svg {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: fill 0.2s ease;
+}
+
+.box_icons_header a:hover svg {
+  fill: #111;
+}
+
+.icon-cart {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+
+/* box prodotti */
+
+.box_prodotti_header  {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -151,7 +171,7 @@ display: flex;
 
 }
 
-.box_newArrivals_header a {
+.box_prodotti_header a {
   font-size: 13px;
   color: rgb(22, 20, 20);
   cursor: pointer;
@@ -253,7 +273,7 @@ align-items: flex-start;
 }
 
 .box_categoryC1_nav_header_newEvidence {
-  background-color: rgb(244, 246, 246);
+  background-color: white;
 
   font-size: 13px;
   position: absolute;
@@ -286,6 +306,10 @@ align-items: flex-start;
 
 }
 
+.box_scopriSport li {
+  cursor: pointer;
+}
+
 .boxCAT1 p{
   font-weight: 600;
 }
@@ -303,43 +327,226 @@ align-items: flex-start;
 /* search caixa de pesquisa*/
 
 
+.containerSearch-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 9999;
+}
+
+.search-bar {
+  background-color: white;
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+  position: relative;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.search_input2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search_input2 input {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.search-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.search-results {
+  margin-top: 20px;
+  max-height: 300px;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.search-item {
+  display: flex;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+}
+
+.search-item img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.search-item-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.containerSearch {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: white;
+  z-index: 1000;
+}
+
+.search_input2 {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+}
+
+.search-input {
+  width: 90%;
+  height: 40px;
+  padding: 5px;
+}
+
+.search-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.close-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
 .containerSearch_item {
   display: flex;
- gap: 10px;
-
-
- width: 100%;
-
-
-  background-color: rgb(250, 253, 253);
-  font-size: 13px;
-  position: absolute;
-  left: 0px;
-
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
 }
 
 .box_itemSearch {
+  flex: 1 1 200px;
+  margin: 10px;
+  text-align: center;
+}
 
-  width:290px;
+.item-image {
+  width: 100%;
   height: auto;
-  display: flex;
-  flex-direction: column;
-
-
-
+  max-width: 250px;
+  display: block;
+  margin: 0 auto;
 }
 
-.box_itemSearch img{
-  width: 290px;
+
+
+/* All */
+
+.h2_titolo {
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgb(234, 230, 230);
+}
+
+
+
+/* component prodotti e sport */
+
+#container_prodotti {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+#filtro {
+  width: 20%;
+  border-right: 1px solid #ddd;
+}
+
+.filtro_opzione h4 {
+  margin-bottom: 10px;
+}
+
+.filtro_opzione ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.filtro_opzione li {
+  cursor: pointer;
+  padding: 5px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.filtro_opzione li:hover,
+.filtro_opzione li.selezionato {
+  background-color: #ddd;
+}
+
+.button-reset {
+  margin-top: 20px;
+  background-color: rgb(226, 212, 212);
+  color: rgb(7, 6, 6);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+#lista_prodotti {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 80%;
+}
+
+.prodotto {
+  border: 1px solid transparent;
+  padding: 10px;
+  text-align: center;
+}
+
+.prodotto img {
+  max-width: 100%;
   height: auto;
 }
 
-.box_info_item {
-  width: 290px;
-  padding: 10px 0;
-  font-size: 16px;
-  display: flex;
-  flex-direction: column;
+.button-load-more {
+  grid-column: span 3;
+  text-align: center;
 }
 
-
+.button-load-more button {
+  background-color:rgb(226, 212, 212);
+  color:rgb(7, 6, 6);
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 8px;
+}

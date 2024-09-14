@@ -1,0 +1,234 @@
+
+
+#container_carrello {
+  display: flex;
+	padding-top: 30px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+  margin: 0 auto;
+  width: 60%;
+  min-height: 400px;
+  gap: 20px;
+
+
+}
+
+#box-sinistra {
+	width: 70%;
+}
+
+#box-destra {
+	width: 30%;
+}
+
+
+
+
+
+.misura_text,
+.sec4 h3 {
+	font-size: 20px;
+}
+.misura_text {
+	padding: 5px 0;
+}
+
+.sec3 a,
+.sec4 {
+	text-decoration: none;
+	color: rgb(49, 45, 45);
+	font-weight: 600;
+	font-size: 10px;
+}
+
+/*------------ sec 1-------------*/
+.sec1 {
+	border: solid rgb(41, 39, 39) 1px;
+}
+
+.sec1 div {
+	margin: 0 auto;
+	width: 98%;
+	padding: 12px 0;
+}
+.sec1 span {
+	font-weight: 600;
+	font-size: 15px;
+	color: tomato;
+	padding-bottom: 30px;
+}
+
+.sec1 p {
+	font-size: 12px;
+	text-decoration: none;
+}
+
+.sec1 p a {
+	text-decoration: none;
+	color: black;
+	border-bottom: solid black 1px;
+}
+/*------------ sec 2-------------*/
+
+div.box1 {
+	width: 27%;
+	margin-right: 5px;
+}
+div.box1 img {
+	width: 100%;
+	height: auto;
+}
+
+div.box1 p,
+div.box1 a {
+	font-size: 10px;
+	font-weight: 600;
+	color: rgb(49, 45, 45);
+}
+
+div.box1 a {
+	text-decoration: none;
+	border-bottom: solid rgb(49, 45, 45) 1px;
+}
+
+div.box2 {
+	font-size: 10px;
+	margin-left: 5px;
+	width: 55%;
+}
+
+div.box2 span {
+	margin-bottom: 5px;
+	display: block;
+}
+
+div.box_size {
+	margin-right: 10px;
+}
+
+div.box_size select,
+div.box_quantita select {
+	border: transparent;
+	font-size: 10px;
+	width: 35px;
+}
+
+
+div.box3 {
+	width: 10%;
+	float: right;
+	padding-top: 10px;
+}
+
+div.box3 span {
+	font-size: 10px;
+	font-weight: 600;
+}
+
+
+/* ---sec 2 box_img---*/
+.sec2 {
+  display: flex;
+}
+
+.box_img {
+	padding-top: 25px;
+	clear: both;
+  display: flex;
+  gap: 10px;
+}
+.box_img button {
+cursor: pointer;
+}
+
+
+
+.box_img div:nth-child(2) img {
+	margin-left: 10px;
+}
+
+/* -------------- sec3 ---------*/
+
+section.sec3 {
+	clear: both;
+}
+
+section.sec3 span {
+	display: block;
+}
+
+section.sec3 a {
+	border-bottom: solid 1px;
+}
+
+/* -----------sec 4 ---------*/
+
+.sec4 h3 {
+	padding-bottom: 10px;
+}
+
+.box-destra-1,
+.box-destra-2 {
+	padding: 3px 0;
+}
+
+.box-destra-1,
+.box-destra-2,
+.box-destra-3 {
+	display: flex;
+  justify-content: space-between;
+}
+
+.box-destra-2 {
+	padding-bottom: 10px;
+}
+
+.box-destra-3 {
+	padding: 15px 0;
+	font-size: 10.8px;
+	border-top: solid black 1px;
+	border-bottom: solid black 1px;
+}
+
+/*-------------sec 5 ---------*/
+
+.sec5 {
+	clear: both;
+	padding: 10px 0;
+	margin: 0 auto;
+	width: 80%;
+}
+
+.sec5 > button:nth-child(2),
+.sec5 > button:nth-child(1) {
+	background-color: aqua;
+}
+
+.sec5 button {
+	font-size: 10px;
+	width: 100%;
+	min-height: 35px;
+	border-radius: 20px;
+	border: transparent;
+  cursor: pointer;
+}
+
+.sec5 button span {
+	display: inline-block;
+	font-size: 10px;
+}
+.sec5 button img {
+	width: 40px;
+}
+
+#neroButton {
+	color: antiquewhite;
+	font-weight: 600;
+	background-color: rgb(33, 32, 32);
+	margin-bottom: 5px;
+}
+
+#whiteButton {
+	background-color: rgb(255, 255, 255);
+	border: solid rgb(33, 32, 32) 2px;
+}
