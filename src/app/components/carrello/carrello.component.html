@@ -1,7 +1,7 @@
+<h3 class=" h2_titolo misura_text">Carrello</h3>
 <div id="container_carrello">
-  <h3 class="misura_text">Carrello</h3>
-  <div id="box-sinistra" *ngFor="let item of prodottiCarrello">
-    <section class="sec2">
+  <div id="box-sinistra">
+    <section class="sec2" *ngFor="let item of prodottiCarrello">
       <div class="box1">
         <img id="img_scarpa" [src]="item.prodotto.immagine" alt="{{ item.prodotto.nome }}" />
         <p>Ritiro gratuito</p>
