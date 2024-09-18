@@ -109,6 +109,14 @@ export class ServizioService {
     this.router.navigate(['/consegna']);  // Redireciona para o componente de pagamento
   }
 
+  vaiAllaPaginaFinalpage(timeoutId: any) {
+    if (timeoutId) {
+      clearTimeout(timeoutId);  // Cancela o timeout se existir
+    }
+    this.router.navigate(['/final-page']);  // Redireciona para o componente de pagamento
+  }
+
+
 
 
 

@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { ServizioService } from '../../services/servizio.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-form-pagamento',
@@ -15,6 +17,9 @@ export class FormPagamentoComponent {
   };
 
   errors: any = {};
+
+
+  constructor(private servizioService: ServizioService, private router: Router) {}
 
   // Regular Expressions for validation
   nomeCartaRegex = /^[A-Za-z\s]{2,}$/;
@@ -55,4 +60,14 @@ export class FormPagamentoComponent {
       // Logica per completare l'ordine
     }
   }
+
+
+  vaiAllaPaginaFinalpage() {
+
+
+    // Redireciona para a página de agradecimento
+    this.router.navigate(['/final-page']);
+  }
+
+
 }

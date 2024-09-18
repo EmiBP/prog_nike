@@ -10,6 +10,7 @@ import { CarrelloComponent } from './components/carrello/carrello.component';
 import { ProdottiComponent } from './components/prodotti/prodotti.component';
 import { SportComponent } from './components/sport/sport.component';
 import { FormPagamentoComponent } from './components/form-pagamento/form-pagamento.component';
+import { FinalPageComponent } from './components/final-page/final-page.component';
 const routes: Routes = [
 
  {path: '', component: HomeSlidersComponent},
@@ -23,6 +24,7 @@ const routes: Routes = [
   { path: 'tutti-prodotti', component: ProdottiComponent },
   { path: 'sport/:categoria', component: SportComponent },
   { path: 'consegna', component: ConsengaComponent },
+  { path: 'final-page', component: FinalPageComponent },
 
 ];
 

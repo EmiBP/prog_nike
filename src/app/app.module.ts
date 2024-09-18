@@ -19,6 +19,7 @@ import { ConsengaComponent } from './components/consenga/consenga.component';
 import { ProdottiComponent } from './components/prodotti/prodotti.component';
 import { SportComponent } from './components/sport/sport.component';
 import { FormPagamentoComponent } from './components/form-pagamento/form-pagamento.component';
+import { FinalPageComponent } from './components/final-page/final-page.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { FormPagamentoComponent } from './components/form-pagamento/form-pagamen
     ProdottiComponent,
     SportComponent,
     FormPagamentoComponent,
+    FinalPageComponent,
 
 
   ],
