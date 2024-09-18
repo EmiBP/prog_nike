@@ -1,118 +1,60 @@
-<p>consenga works!</p>
-<div id="container_consegna">
-  <div id="container_consegna1">
-    <h3 class="titolo">Opzioni di consegna</h3>
-    <section id="sec_1">
-      <form action="#">
-        <div class="sec_1_box1">
-          <button class="fontSize left diviso2">
-            <img src="icon/shipping-timed.svg" alt="" />Spedizione
-          </button>
-          <button class="fontSize right diviso2">
-            <img src="icon/search-location.svg" alt="" />Ritiro
-          </button>
-        </div>
-        <div class="sec_1_box2">
-          <input
-            class="left diviso2"
-            type="text"
-            name="lname"
-            placeholder="Nome*"
-          >
-          <input
-            class="right diviso2"
-            type="text"
-            name="lname"
-            placeholder="Cognome*"
-          >
-        </div>
-        <input
-          class="width100 sec_1_input1"
-          type="text"
-          name="lname"
-          placeholder="Indirizzo e numero civico**"
-        >
-        <div class="sec_1_box3 left">
-          <button ><img src="icon/add.svg" alt=""></button>
-          <span class="fontSize"
-            >Aggiungi Azienda, C/O, App., Interno, Unità</span
-          >
-        </div>
-        <div class="sec_1_box4 width100 pulire">
-          <input
-            type="text"
-            name="lname"
-            placeholder="CAP*"
-          >
-          <input
-            type="text"
-            name="lname"
-            placeholder="Città*"
-          >
-          <input
-            type="text"
-            name="lname"
-            placeholder="Italia*"
-          >
-        </div>
-
-        <div class="sec_1_box5 width100 left diviso2">
-          <input
-            class="left"
-            type="text"
-            name="lname"
-            placeholder="E-mail*"
-          />
-          <input
-            class="right"
-            type="text"
-            id="lname"
-            name="lname"
-            placeholder="Numero di telefono*"
-          />
-        </div>
-      </form>
-      <button class="buttonSave fontSize pulire">
-        <span>Salva e continua</span>
-      </button>
-    </section>
-    <section id="sec_2" class="pulire">
-    <hr>
-    <span class="titolo sec_2pgtoVerif">Pagamento</span>
-    <hr>
-    <span class="titolo sec_2pgtoVerif">Verifica dell'ordine</span>
-    <hr>
-    </section>
-  </div>
-
-  <section id="sec_3" class="left">
-    <div class="carrello_box1 left">
-      <h3 class="titolo left">Nel Carrello</h3>
-      <input class="underline" placeholder="Modifica"/>
+<div class="form-container">
+  <h1>Consegna</h1>
+  <h2>Inserisci il nome e l'indirizzo:</h2>
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="nome">Nome</label>
+      <input type="text" id="nome" placeholder="Nome" [(ngModel)]="formData.nome" name="nome" />
+      <small *ngIf="errors.nome" class="error">{{ errors.nome }}</small>
     </div>
-    <div class="carrello_box2">
-      <span class="left">Subtotale</span>
-      <span class="right">233,40</span>
-      <span class="left">Costi di spedizione stimati</span>
-      <span class="right">0,00</span>
-      <span class="left">Total</span>
-      <span class="right">239,20</span>
-
+    <div class="form-group">
+      <label for="cognome">Cognome</label>
+      <input type="text" id="cognome" placeholder="Cognome" [(ngModel)]="formData.cognome" name="cognome" />
+      <small *ngIf="errors.cognome" class="error">{{ errors.cognome }}</small>
     </div>
-
-          <hr class="pulire">
-
-    <div id="c-box3" class="carrello_box3">
-
-      <img class="diviso2 left" src="Scarpa_2/3.jpg" alt="" />
-      <div class="diviso2 right">
-        <h3>Scarpa Nike Air Max Dn</h3>
-        <span>Taglia/Misura</span>
-        <span>EU 43</span>
-        <span>Qtà</span>
-        <span>1</span>
-        <span>150,00</span>
+    <div class="form-group">
+      <label for="indirizzo1">Indirizzo - Riga 1</label>
+      <input type="text" id="indirizzo1" placeholder="Indirizzo - Riga 1" [(ngModel)]="formData.indirizzo1" name="indirizzo1" />
+      <small *ngIf="errors.indirizzo1" class="error">{{ errors.indirizzo1 }}</small>
+    </div>
+    <div class="form-group">
+      <label for="indirizzo2">Indirizzo - Riga 2</label>
+      <input type="text" id="indirizzo2" placeholder="Indirizzo - Riga 2" [(ngModel)]="formData.indirizzo2" name="indirizzo2" />
+    </div>
+    <div class="form-row">
+      <div class="form-group half">
+        <label for="codice-postale">Codice postale</label>
+        <input type="text" id="codice-postale" placeholder="Codice postale" [(ngModel)]="formData.codicePostale" name="codice-postale" />
+        <small *ngIf="errors.codicePostale" class="error">{{ errors.codicePostale }}</small>
+      </div>
+      <div class="form-group half">
+        <label for="citta">Città</label>
+        <input type="text" id="citta" placeholder="Città" [(ngModel)]="formData.citta" name="citta" />
+        <small *ngIf="errors.citta" class="error">{{ errors.citta }}</small>
       </div>
     </div>
-  </section>
+    <div class="form-group">
+      <label for="paese">Paese</label>
+      <select id="paese" [(ngModel)]="formData.paese" name="paese">
+        <option value="">Seleziona un Paese</option>
+        <option value="Svizzera">Svizzera</option>
+        <!-- Outras opções -->
+      </select>
+      <small *ngIf="errors.paese" class="error">{{ errors.paese }}</small>
+    </div>
+
+    <h2>Quali sono le tue informazioni di contatto?</h2>
+    <div class="form-group">
+      <label for="email">E-mail</label>
+      <input type="email" id="email" placeholder="E-mail" [(ngModel)]="formData.email" name="email" />
+      <small *ngIf="errors.email" class="error">{{ errors.email }}</small>
+    </div>
+    <div class="form-group">
+      <label for="telefono">Numero di telefono</label>
+      <input type="tel" id="telefono" placeholder="Numero di telefono" [(ngModel)]="formData.telefono" name="telefono" />
+      <small *ngIf="errors.telefono" class="error">{{ errors.telefono }}</small>
+    </div>
+
+    <button type="submit" class="submit-btn">Salva e continua</button>
+  </form>
 </div>

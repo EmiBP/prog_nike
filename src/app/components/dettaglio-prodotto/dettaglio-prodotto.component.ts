@@ -16,6 +16,7 @@ export class DettaglioProdottoComponent implements OnInit {
   erroreColore: boolean = false;
   mostraCarrello: boolean = false;
   deveRedirecionar: boolean = true;
+  timeoutId: any;
 
   prodottoSelezionato: any;
   quantita: number = 1;
@@ -30,11 +31,13 @@ export class DettaglioProdottoComponent implements OnInit {
   }
 
   selezionaTaglia(taglia: string) {
+    console.log('Taglia selecionada:', taglia); // Para verificar se está funcionando
     this.tagliaSelezionata = taglia;
     this.erroreTaglia = false;
   }
 
   selezionaColore(colore: string) {
+    console.log('Colore selecionado:', colore); // Para verificar se está funcionando
     this.coloreSelezionato = colore;
     this.erroreColore = false;
   }
@@ -66,13 +69,33 @@ export class DettaglioProdottoComponent implements OnInit {
 
     setTimeout(() => {
       if (this.deveRedirecionar) {
-        this.router.navigate(['/carrello']);
+        this.chiudiCarrello();
       }
-    }, 2000);
+    }, 5000);
   }
 
   chiudiCarrello() {
     this.mostraCarrello = false;
     this.deveRedirecionar = false;
   }
+
+  visualizzaCarrello() {
+    this.router.navigate(['/carrello']);  // Redireciona para o componente Carrello
+  }
+
+  // Redireciona para o componente de pagamento
+  vaiPagamento() {
+    this.router.navigate(['/form-pagamento']);  // Redireciona para o componente FormPagamento
+  }
+
+    // Usando o método do serviço para redirecionar ao carrinho
+    vaiAlCarrello() {
+      this.servizioService.vaiAlCarrello(this.timeoutId);
+    }
+
+    // Usando o método do serviço para redirecionar ao pagamento
+    vaiAlPagamento() {
+      this.servizioService.vaiAlPagamento(this.timeoutId);
+    }
+
 }

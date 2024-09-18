@@ -56,11 +56,12 @@
     </div>
     <div class="container" *ngIf="mostraCarrello">
       <div class="container_boxCarrello">
-        <div><button class="close_div" (click)="chiudiCarrello()">chiudi</button></div>
+        <div>
+          <button class="close_div" (click)="chiudiCarrello()">chiudi</button>
+        </div>
         <div class="box-1">
-          <img class="box-img1" src="icon/icons8-checkmark.svg" alt="" />
-          <span id="addCarrello">Aggiunto al carrello </span>
-          <img class="box-img2" src="icon/icons8-delete.svg" alt="" />
+          <span id="addCarrello">Aggiunto al carrello</span>
+
         </div>
         <img class="box-img3" [src]="prodotto.immagine" alt="{{ prodotto.nome }}" />
         <div class="box-2">
@@ -72,11 +73,10 @@
           <span id="prezzo">{{prodotto.prezzo}}</span>
         </div>
         <div class="box-3">
-          <button>Visualizza carrello (<span></span>)</button>
-          <button><span>Pagamento</span></button>
+          <button (click)="visualizzaCarrello()">Visualizza carrello</button>
+          <button (click)="vaiAlPagamento()">Pagamento</button>
         </div>
       </div>
     </div>
-
   </section>
 </div>

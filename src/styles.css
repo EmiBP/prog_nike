@@ -324,7 +324,7 @@ align-items: flex-start;
 }
 
 
-/* search caixa de pesquisa*/
+/* componente search caixa de pesquisa*/
 
 
 .containerSearch-overlay {
@@ -339,6 +339,7 @@ align-items: flex-start;
   justify-content: flex-start;
   align-items: center;
   z-index: 9999;
+
 }
 
 .search-bar {
@@ -408,11 +409,17 @@ align-items: flex-start;
 }
 .containerSearch {
   width: 100%;
-  position: absolute;
-  top: 0;
+  position: fixed;
+  top: 30px; /* Ajuste esse valor para a altura exata do seu header */
   left: 0;
   background-color: white;
-  z-index: 1000;
+  z-index: 10000;
+  height: 40vh; /* Mantém a altura em 40% da tela */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .search_input2 {

@@ -1,0 +1,44 @@
+<div class="form-checkout">
+  <h1>Pagamento</h1>
+  <h2>Come desideri pagare?</h2>
+
+  <!-- Opzioni di pagamento -->
+  <div class="payment-options">
+    <button type="button" (click)="selezionaPagamento('carta')" class="payment-btn">
+      Carta di credito o debito
+    </button>
+    <button type="button" (click)="selezionaPagamento('paypal')" class="payment-btn">
+      PayPal
+    </button>
+  </div>
+
+  <!-- Sezione carta di credito -->
+  <div *ngIf="metodoPagamento === 'carta'" class="card-payment">
+    <h3>Inserisci i tuoi dati di pagamento:</h3>
+    <div class="form-group">
+      <label for="nome-carta">Nome sulla carta</label>
+      <input type="text" id="nome-carta" placeholder="Nome sulla carta" [(ngModel)]="formData.nomeCarta" name="nome-carta" />
+      <small *ngIf="errors.nomeCarta" class="error">{{ errors.nomeCarta }}</small>
+    </div>
+    <div class="form-group">
+      <label for="numero-carta">Numero di carta</label>
+      <input type="text" id="numero-carta" placeholder="Numero di carta" [(ngModel)]="formData.numeroCarta" name="numero-carta" />
+      <small *ngIf="errors.numeroCarta" class="error">{{ errors.numeroCarta }}</small>
+    </div>
+    <div class="form-row">
+      <div class="form-group half">
+        <label for="data-carta">MM/AA</label>
+        <input type="text" id="data-carta" placeholder="MM/AA" [(ngModel)]="formData.dataCarta" name="data-carta" />
+        <small *ngIf="errors.dataCarta" class="error">{{ errors.dataCarta }}</small>
+      </div>
+      <div class="form-group half">
+        <label for="cvv">CVV</label>
+        <input type="text" id="cvv" placeholder="CVV" [(ngModel)]="formData.cvv" name="cvv" />
+        <small *ngIf="errors.cvv" class="error">{{ errors.cvv }}</small>
+      </div>
+    </div>
+  </div>
+
+  <!-- Botão para efetuar ordem -->
+  <button class="submit-btn" (click)="effettuaOrdine()">Finalizza Ordine</button>
+</div>

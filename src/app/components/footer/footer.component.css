@@ -1,18 +1,37 @@
-
+/* Estilos do footer */
 .box_footer {
- margin: 0 auto;
- width: 55%;
+  background-color: #f8f8f8;
+  padding: 15px;
+  text-align: center;
+  border-top: 1px solid #e0e0e0;
+  margin-top: 50px; /* Para dar um espaço entre o conteúdo da página e o footer */
 }
+
 .box_footer ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.box_footer ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+.box_footer ul li a {
+  text-decoration: none;
+  color: #333;
   font-size: 14px;
-  display: flex;
-  height: 100px;
-  font-weight: 600;
-  justify-content: space-between;
-
-
-}
-.box_footer a {
-  color: rgb(19, 12, 12);
 }
 
+.box_footer ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Responsivo para telas menores */
+@media (max-width: 600px) {
+  .box_footer ul li {
+    display: block;
+    margin: 5px 0;
+  }
+}

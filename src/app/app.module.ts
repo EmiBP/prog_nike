@@ -6,8 +6,8 @@ import { AppComponent } from './app.component';
 import { HttpClientModule} from '@angular/common/http';
 import { HeaderComponent } from './components/header/header.component';
 import { FormsModule } from '@angular/forms';
-import { PrevDirective } from './prev.directive';
-import { NextDirective } from './next.directive';
+import { PrevDirective } from './components/home-sliders/prev.directive';
+import { NextDirective } from './components/home-sliders/next.directive';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeSlidersComponent } from './components/home-sliders/home-sliders.component';
 import { NewArrivalsComponent } from './components/new-arrivals/new-arrivals.component';
@@ -19,6 +19,8 @@ import { PaymentComponent } from './components/payment/payment.component';
 import { ConsengaComponent } from './components/consenga/consenga.component';
 import { ProdottiComponent } from './components/prodotti/prodotti.component';
 import { SportComponent } from './components/sport/sport.component';
+import { FormCheckoutComponent } from './components/form-checkout/form-checkout.component';
+import { FormPagamentoComponent } from './components/form-pagamento/form-pagamento.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,8 @@ import { SportComponent } from './components/sport/sport.component';
     ConsengaComponent,
     ProdottiComponent,
     SportComponent,
+    FormCheckoutComponent,
+    FormPagamentoComponent,
 
 
   ],

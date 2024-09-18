@@ -16,6 +16,8 @@ export class HeaderComponent {
   showItem: boolean = false;
   inputSearch: any;
   numeroProdottiCarrello: number = 0;
+  prodottiCarrello: any[] = [];
+
 
 
 
