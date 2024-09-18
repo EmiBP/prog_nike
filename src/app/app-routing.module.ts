@@ -9,7 +9,6 @@ import { DettaglioProdottoComponent } from './components/dettaglio-prodotto/dett
 import { CarrelloComponent } from './components/carrello/carrello.component';
 import { ProdottiComponent } from './components/prodotti/prodotti.component';
 import { SportComponent } from './components/sport/sport.component';
-import { FormCheckoutComponent } from './components/form-checkout/form-checkout.component';
 import { FormPagamentoComponent } from './components/form-pagamento/form-pagamento.component';
 const routes: Routes = [
 
