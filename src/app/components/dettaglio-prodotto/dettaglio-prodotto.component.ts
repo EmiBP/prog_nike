@@ -92,10 +92,4 @@ export class DettaglioProdottoComponent implements OnInit {
     vaiAlCarrello() {
       this.servizioService.vaiAlCarrello(this.timeoutId);
     }
-
-    // Usando o método do serviço para redirecionar ao pagamento
-    vaiAlPagamento() {
-      this.servizioService.vaiAlPagamento(this.timeoutId);
-    }
-
 }

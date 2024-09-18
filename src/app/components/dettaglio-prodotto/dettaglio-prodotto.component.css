@@ -187,6 +187,8 @@
 width: 260px;
 }
 .box-3 {
+  display: flex;
+  justify-content: center;
 	padding-top: 10px;
 	min-height: 50px;
 }
