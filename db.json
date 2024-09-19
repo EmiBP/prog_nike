@@ -210,7 +210,7 @@
           "taglie_disponibili": ["38", "39", "40", "41", "42", "43", "44", "45"],
           "colori_disponibili": ["Nero", "Bianco", "Blu", "Rosso", "Grigio"],
           "descrizione": "Le Nike Air Max Sequent 4 sono scarpe da corsa comode e versatili, ideali per l'uso quotidiano o l'allenamento leggero.",
-          "immagine": "ttps://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/6c7a3a25-1044-4562-bd20-3d4c1356815f/AIR+JORDAN+1+LOW+%28GS%29.png"
+          "immagine": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/6c7a3a25-1044-4562-bd20-3d4c1356815f/AIR+JORDAN+1+LOW+%28GS%29.png"
         },
         {
           "id": 20,
@@ -244,7 +244,7 @@
           "taglie_disponibili": ["38", "39", "40", "41", "42", "43", "44", "45"],
           "colori_disponibili": ["Nero", "Bianco", "Blu", "Rosso", "Grigio"],
           "descrizione": "Le Nike Air Max Tailwind IV sono scarpe da running retrò con un'ammortizzazione Air Max e uno stile distintivo.",
-          "immagine": "ttps://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/a104de53-5296-4b31-8eda-1a87e7d8b4e2/AIR+JORDAN+1+MID+%28GS%29.png"
+          "immagine": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/u_126ab356-44d8-4a06-89b4-fcdcc8df0245,c_scale,fl_relative,w_1.0,h_1.0,fl_layer_apply/a104de53-5296-4b31-8eda-1a87e7d8b4e2/AIR+JORDAN+1+MID+%28GS%29.png"
         },
         {
           "id": 23,

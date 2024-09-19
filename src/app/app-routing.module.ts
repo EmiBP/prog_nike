@@ -14,7 +14,6 @@ import { FinalPageComponent } from './components/final-page/final-page.component
 const routes: Routes = [
 
  {path: '', component: HomeSlidersComponent},
- {path: '', component: BannerHomeComponent},
  {path: 'nuovi-arrivi', component: NewArrivalsComponent},
  { path: 'dettaglio-prodotto/:id', component: DettaglioProdottoComponent },
  { path: 'form-pagamento', component: FormPagamentoComponent },

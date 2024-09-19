@@ -24,10 +24,15 @@ export class DettaglioProdottoComponent implements OnInit {
   constructor(private route: ActivatedRoute, private servizioService: ServizioService, private router: Router) {}
 
   ngOnInit(): void {
-    const id = +this.route.snapshot.paramMap.get('id')!;
-    this.servizioService.getProdottoById(id).subscribe((data) => {
-      this.prodotto = data;
-    });
+    const id = this.route.snapshot.paramMap.get('id');
+    if (id) {
+      this.servizioService.getProdottoById(+id).subscribe((data) => {
+        this.prodotto = data;
+      });
+    } else {
+      console.error('ID do produto não encontrado');
+      // Redirecionar ou mostrar uma mensagem de erro
+    };
   }
 
   selezionaTaglia(taglia: string) {

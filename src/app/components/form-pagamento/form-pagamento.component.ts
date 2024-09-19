@@ -39,45 +39,34 @@ export class FormPagamentoComponent {
       this.errors.nomeCarta = 'Inserisci un nome valido (minimo 2 lettere)';
     }
 
-    // Validazione numero di carta
     if (!this.numeroCartaRegex.test(this.formData.numeroCarta)) {
       this.errors.numeroCarta = 'Inserisci un numero di carta valido (13-19 cifre)';
     }
 
-    // Validazione data di scadenza
     if (!this.dataCartaRegex.test(this.formData.dataCarta)) {
       this.errors.dataCarta = 'Inserisci una data di scadenza valida (MM/AA)';
     }
 
-    // Validazione CVV
     if (!this.cvvRegex.test(this.formData.cvv)) {
       this.errors.cvv = 'Inserisci un CVV valido (3 o 4 cifre)';
     }
 
-    // Se non ci sono errori, procedi con l'ordine
+
     if (Object.keys(this.errors).length === 0) {
       console.log('Dati di pagamento corretti:', this.formData);
-      // Logica per completare l'ordine
     }
   }
 
 
-  vaiAllaPaginaFinalpage() {
-    // Obtenha o estado atual do carrinho
-    const prodottiCarrello = this.servizioService.getProdottiCarrello();
 
-    // Atualize o carrinho no serviço
-    this.servizioService.setProdottoCarrello(prodottiCarrello);
+  finalizzaAcquisto() {
 
-    // Verifique se o carrinho está atualizado antes de redirecionar
-    if (this.servizioService.getProdottiCarrello().length > 0) {
-      // Redireciona para a página final
-      this.router.navigate(['/final-page']);
-    } else {
-      // Caso o carrinho esteja vazio, mostre uma mensagem de erro (opcional)
-      console.log("Erro: Carrinho está vazio");
-    }
+    this.servizioService.clearCarrello();
+    this.router.navigate(['/final-page']);
+
   }
+
+
 }
 
 

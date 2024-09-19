@@ -38,6 +38,12 @@ export class ServizioService {
     this.carrelloSubject.next(this.prodottiCarrello); // Emita a nova versão do carrinho para os observadores
   }
 
+
+  clearCarrello() {
+    this.prodottiCarrello = [];
+    this.carrelloSubject.next(this.prodottiCarrello); // Emite a mudança para os inscritos
+  }
+
   getProdottoCarrello() {
     return this.prodottiCarrello;
   }

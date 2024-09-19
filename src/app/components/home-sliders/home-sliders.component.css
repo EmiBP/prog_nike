@@ -82,7 +82,7 @@
   .icons_product img, .news_shoes img {
     object-fit: cover;
     width: 360px;
-    min-height: 200px;
+    max-height: 200px;
 
   }
 

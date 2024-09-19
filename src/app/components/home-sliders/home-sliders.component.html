@@ -179,7 +179,7 @@
         <div style="cursor: pointer;" *ngFor="let prodotto of prodotti" class="item">
           <div class="text">
             <a (click)="onItemClick(prodotto.id)">
-              <img src="https://static.nike.com/a/images/f_auto/dpr_1.5,cs_srgb/w_599,c_limit/800b58e3-b669-4dc3-a2d4-e68f5688d151/nike-just-do-it.jpg" alt="">
+              <img src="{{prodotto.immagine}}">
               <div class="news_shoesBloco_info">
                 <span>{{prodotto.nome}}</span>
                 <span>{{prodotto.prezzo}}</span>
