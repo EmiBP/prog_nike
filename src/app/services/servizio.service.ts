@@ -31,8 +31,8 @@ export class ServizioService {
     return this.http.get('http://localhost:3000/prodotti?nuovo_arrivi=true');
   }
 
-  setProdottoCarrello(prodotto: any) {
-    this.prodottiCarrello = prodotto;
+  setProdottoCarrello(prodottiCarrello: { prodotto: Prodotto; quantita: number }[]) {
+    this.carrelloSubject.next(prodottiCarrello);
   }
 
   getProdottoCarrello() {

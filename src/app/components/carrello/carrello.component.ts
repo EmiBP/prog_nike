@@ -17,17 +17,12 @@ export class CarrelloComponent implements OnInit {
   constructor(private servizioService: ServizioService, private router: Router) {}
 
   ngOnInit() {
-    // Observar as mudanças no carrinho e atualizar a UI quando necessário
     this.servizioService.getCarrelloObservable().subscribe(carrello => {
       this.prodottiCarrello = carrello;
-
-      // Se existirem produtos no carrinho, atualizar a taglia e o colore do primeiro item
-      if (this.prodottiCarrello.length > 0) {
-        this.tagliaSelezionata = this.prodottiCarrello[0].prodotto.taglia || '';
-        this.coloreSelezionato = this.prodottiCarrello[0].prodotto.colore || null;
-      }
+      console.log('Carrello aggiornato:', this.prodottiCarrello);
     });
   }
+
 
 
 
