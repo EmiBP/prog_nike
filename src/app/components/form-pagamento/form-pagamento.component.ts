@@ -63,11 +63,21 @@ export class FormPagamentoComponent {
 
 
   vaiAllaPaginaFinalpage() {
+    // Obtenha o estado atual do carrinho
+    const prodottiCarrello = this.servizioService.getProdottiCarrello();
 
+    // Atualize o carrinho no serviço
+    this.servizioService.setProdottoCarrello(prodottiCarrello);
 
-    // Redireciona para a página de agradecimento
-    this.router.navigate(['/final-page']);
+    // Verifique se o carrinho está atualizado antes de redirecionar
+    if (this.servizioService.getProdottiCarrello().length > 0) {
+      // Redireciona para a página final
+      this.router.navigate(['/final-page']);
+    } else {
+      // Caso o carrinho esteja vazio, mostre uma mensagem de erro (opcional)
+      console.log("Erro: Carrinho está vazio");
+    }
   }
-
-
 }
+
+

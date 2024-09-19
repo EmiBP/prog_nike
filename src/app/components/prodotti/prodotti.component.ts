@@ -28,7 +28,11 @@ export class ProdottiComponent implements OnInit {
     // Carregar todos os produtos do servidor
     this.servizioService.getAll().subscribe((data) => {
       this.prodotti = data;
-      this.filtraProdotti(); // Aplica os filtros ao iniciar
+      console.log('Itens retornados:', data);
+
+      // Mostra o total de itens carregados antes dos filtros
+      // Aplica os filtros ao iniciar
+      this.filtraProdotti();
     });
   }
 

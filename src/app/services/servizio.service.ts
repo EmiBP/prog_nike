@@ -20,7 +20,8 @@ export class ServizioService {
   constructor(private http: HttpClient, private router: Router) {}
 
   getAll(): Observable<Prodotto[]> {
-    return this.http.get<Prodotto[]>(this.apiURL);
+    const limit = 25;  // Defina o limite de itens aqui
+    return this.http.get<Prodotto[]>(`${this.apiURL}?_limit=${limit}`);
   }
 
   getProdottoById(id: number): Observable<any> {
@@ -28,11 +29,13 @@ export class ServizioService {
   }
 
   getNovosProdutos() {
-    return this.http.get('http://localhost:3000/prodotti?nuovo_arrivi=true');
+    const limit = 25;  // Limite de itens
+    return this.http.get(`${this.apiURL}?nuovo_arrivi=true&_limit=${limit}`);
   }
 
   setProdottoCarrello(prodottiCarrello: { prodotto: Prodotto; quantita: number }[]) {
-    this.carrelloSubject.next(prodottiCarrello);
+    this.prodottiCarrello = prodottiCarrello; // Atualize o array local
+    this.carrelloSubject.next(this.prodottiCarrello); // Emita a nova versão do carrinho para os observadores
   }
 
   getProdottoCarrello() {
@@ -65,6 +68,7 @@ export class ServizioService {
     const index = this.prodottiCarrello.findIndex(item => item.prodotto.id === prodottoId);
     if (index !== -1) {
       this.prodottiCarrello[index].quantita = quantita;
+      this.carrelloSubject.next(this.prodottiCarrello);  // Emite a mudança para todos os inscritos
     }
   }
 

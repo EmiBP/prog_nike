@@ -44,6 +44,11 @@ export class CarrelloComponent implements OnInit {
   aggiornaCarrello() {
     this.servizioService.setProdottoCarrello(this.prodottiCarrello);
   }
+
+  aggiornaQuantita(prodottoId: number, quantita: number) {
+    this.servizioService.updateQuantita(prodottoId, quantita);
+    this.aggiornaCarrello();  // Atualiza o carrinho após a mudança de quantidade
+  }
   vaiAConsegna() {
     this.servizioService.vaiAConsegna(this.timeoutId);
   }
