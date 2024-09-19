@@ -94,6 +94,9 @@ export class HeaderComponent {
     });
   }
 
+  goToBestSeller(): void {
+    this.router.navigate(['/best-seller']); // Altere a rota se necessário
+  }
 
 
 }

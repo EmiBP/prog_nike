@@ -1,16 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { ServizioService } from '../../services/servizio.service';
 import { Router } from '@angular/router';
+import { Prodotto } from '../../models/Prodotto';
 
 @Component({
-  selector: 'app-prodotti',
-  templateUrl: './prodotti.component.html',
-  styleUrls: ['./prodotti.component.css']
+  selector: 'app-best-seller',
+  templateUrl: './best-seller.component.html',
+  styleUrls: ['./best-seller.component.css']
 })
-export class ProdottiComponent implements OnInit {
-  prodotti: any[] = [];
-  prodottiFiltrati: any[] = [];
-  prodottiVisualizzati: any[] = [];
+export class BestSellerComponent implements OnInit {
+
+  prodotti: Prodotto[] = [];
+  prodottiFiltrati: Prodotto[] = [];
+  prodottiVisualizzati: Prodotto[] = [];
   prodottiPerPagina: number = 6;
   paginaCorrente: number = 1;
 
@@ -24,80 +26,60 @@ export class ProdottiComponent implements OnInit {
   constructor(private servizioService: ServizioService, private router: Router) {}
 
   ngOnInit(): void {
-    this.loadProdotti(); // Carregar produtos ao iniciar
-  }
-
-  // Método para carregar produtos do serviço
-  private loadProdotti(): void {
     this.servizioService.getAll().subscribe((data) => {
-      this.prodotti = data;
-      this.filtraProdotti(); // Aplica os filtros após carregar os produtos
+      this.prodotti = data.filter(prodotto => prodotto.best_seller >= 4); // Filtra os best sellers
+      this.filtraProdotti();
     });
   }
 
-  // Navegar para a página de detalhes do produto
-  onItemClick(id: number): void {
-    // Lógica para navegar ou realizar ação ao clicar no produto
+  onItemClick(id: number) {
     this.router.navigate([`/dettaglio-prodotto/${id}`]);
   }
 
-  // Carregar produtos da página atual
-  private caricaProdotti(): void {
+  caricaProdotti(): void {
     const inizio = (this.paginaCorrente - 1) * this.prodottiPerPagina;
     const fine = this.paginaCorrente * this.prodottiPerPagina;
     this.prodottiVisualizzati = this.prodottiFiltrati.slice(inizio, fine);
   }
 
-  // Carregar mais produtos (paginação)
   caricaAltriProdotti(): void {
     this.paginaCorrente++;
     this.caricaProdotti();
-    // Lógica adicional para verificar se há mais produtos para carregar
-    if (this.prodottiFiltrati.length > this.paginaCorrente * this.prodottiPerPagina) {
-      this.caricaProdotti();
-    } else {
-      console.log('Não há mais produtos para carregar.');
-    }
   }
 
-  // Selecionar categoria e aplicar filtro
   selezionaCategoria(categoria: string): void {
     this.categoriaSelezionata = categoria;
-    this.resetPagina(); // Reseta a página ao aplicar filtro
+    this.paginaCorrente = 1;
     this.filtraProdotti();
   }
 
-  // Selecionar cor e aplicar filtro
   selezionaColore(colore: string): void {
     this.coloreSelezionato = colore;
-    this.resetPagina(); // Reseta a página ao aplicar filtro
+    this.paginaCorrente = 1;
     this.filtraProdotti();
   }
 
-  // Filtra produtos com base em categoria, cor e preço
-  public filtraProdotti(): void {
+  filtraProdotti(): void {
     this.prodottiFiltrati = this.prodotti.filter(prodotto => {
       const categoriaValida = !this.categoriaSelezionata || prodotto.categoria === this.categoriaSelezionata;
       const coloreValido = !this.coloreSelezionato || prodotto.colori_disponibili.includes(this.coloreSelezionato);
       const prezzoValido = prodotto.prezzo <= this.prezzoFiltro;
 
-      return categoriaValida && coloreValido && prezzoValido;
+      return prezzoValido && categoriaValida && coloreValido;
     });
 
-    this.caricaProdotti(); // Atualiza a visualização com produtos filtrados
+    this.caricaProdotti();
   }
 
-  // Reseta os filtros para os valores padrão
   resetFiltri(): void {
     this.categoriaSelezionata = null;
     this.coloreSelezionato = null;
     this.prezzoFiltro = 500;
-    this.resetPagina(); // Reseta para a primeira página
+    this.paginaCorrente = 1;
     this.filtraProdotti();
   }
 
-  // Reseta a página atual
-  private resetPagina(): void {
-    this.paginaCorrente = 1;
+  get bestSellerCount(): number {
+    return this.prodotti.filter(prodotto => prodotto.best_seller >= 4).length; // Contagem de produtos best seller
   }
 }

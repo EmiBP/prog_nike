@@ -20,6 +20,7 @@ import { ProdottiComponent } from './components/prodotti/prodotti.component';
 import { SportComponent } from './components/sport/sport.component';
 import { FormPagamentoComponent } from './components/form-pagamento/form-pagamento.component';
 import { FinalPageComponent } from './components/final-page/final-page.component';
+import { BestSellerComponent } from './components/best-seller/best-seller.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { FinalPageComponent } from './components/final-page/final-page.component
     SportComponent,
     FormPagamentoComponent,
     FinalPageComponent,
+    BestSellerComponent,
 
 
   ],

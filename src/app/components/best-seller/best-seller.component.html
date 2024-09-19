@@ -1,0 +1,37 @@
+<h2 class="h2_titolo">Best seller <span>{{ bestSellerCount }}</span></h2>
+<div id="container_prodotti">
+  <div id="filtro">
+    <h3>Filtri</h3>
+    <div class="filtro_opzione">
+      <h4>Categorie</h4>
+      <ul>
+        <li *ngFor="let categoria of categorie" (click)="selezionaCategoria(categoria)" [class.selezionato]="categoria === categoriaSelezionata">{{ categoria }}</li>
+      </ul>
+    </div>
+    <div class="filtro_opzione">
+      <h4>Colore</h4>
+      <ul>
+        <li *ngFor="let colore of colori" (click)="selezionaColore(colore)" [class.selezionato]="colore === coloreSelezionato">{{ colore }}</li>
+      </ul>
+    </div>
+    <div class="filtro_opzione">
+      <h4>Acquista per prezzo</h4>
+      <input type="range" min="50" max="500" step="10" [(ngModel)]="prezzoFiltro" (input)="filtraProdotti()" />
+      <span>{{ prezzoFiltro | currency:'EUR' }}</span>
+    </div>
+    <button class="button-reset" (click)="resetFiltri()">Resetta filtri</button>
+  </div>
+
+  <div id="lista_prodotti">
+    <div class="prodotto" *ngFor="let prodotto of prodottiVisualizzati" (click)="onItemClick(prodotto.id)">
+      <span *ngIf="prodotto.best_seller >= 4" style="color: orange;">Best seller</span>
+      <img [src]="prodotto.immagine" alt="{{ prodotto.nome }}" />
+      <h4>{{ prodotto.nome }}</h4>
+      <p>{{ prodotto.prezzo | currency:'EUR' }}</p>
+    </div>
+  </div>
+
+  <div class="button-load-more">
+    <button (click)="caricaAltriProdotti()">Carica altri prodotti</button>
+  </div>
+</div>

@@ -22,8 +22,8 @@
           "taglie_disponibili": ["38", "39", "40", "41", "42", "43", "44", "45"],
           "colori_disponibili": ["Nero/Giallo", "Grigio/Blu", "Bianco/Rosso", "Verde", "Blu"],
           "descrizione": "Le Nike React Infinity Run Flyknit sono progettate per la massima ammortizzazione e stabilità durante la corsa. Con tomaia in Flyknit per un comfort superiore.",
-          "immagine": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/l3w4varugbogihcpj40e/W+AF1+SHADOW.png"
-
+          "immagine": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/l3w4varugbogihcpj40e/W+AF1+SHADOW.png",
+          "best_seller": 5
         },
         {
           "id": 3,
@@ -67,7 +67,8 @@
           "taglie_disponibili": ["38", "39", "40", "41", "42", "43", "44", "45"],
           "colori_disponibili": ["Nero", "Bianco", "Grigio", "Blu", "Rosso"],
           "descrizione": "Le Nike Revolution 5 sono scarpe leggere e traspiranti, ideali per correre o per l'uso quotidiano. Ottimo rapporto qualità-prezzo.",
-          "immagine": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/4177cb88-7dbe-47ac-8600-82584ab91f73/ZM+VAPOR+16+ELITE+FG.png"
+          "immagine": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/4177cb88-7dbe-47ac-8600-82584ab91f73/ZM+VAPOR+16+ELITE+FG.png",
+          "best_seller": 4
         },
         {
           "id": 7,
@@ -79,7 +80,8 @@
           "colori_disponibili": ["Nero/Grigio", "Bianco/Nero", "Blu", "Rosso", "Verde"],
           "descrizione": "Le Nike Air Zoom Structure 24 sono scarpe da corsa stabili e ammortizzate, ideali per runner che cercano supporto e comfort.",
           "immagine": "https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/f9728d6e-394e-4025-a83d-9d8c410b1028/ZM+VAPOR+16+PRO+FG.png"
-        },
+      ,  "best_seller": 4
+    },
         {
           "id": 8,
           "nome": "Nike Air Max 97",

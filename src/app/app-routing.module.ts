@@ -1,3 +1,4 @@
+import { BestSellerComponent } from './components/best-seller/best-seller.component';
 import { ConsengaComponent } from './components/consenga/consenga.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -24,6 +25,7 @@ const routes: Routes = [
   { path: 'sport/:categoria', component: SportComponent },
   { path: 'consegna', component: ConsengaComponent },
   { path: 'final-page', component: FinalPageComponent },
+  { path: 'best-seller', component: BestSellerComponent },
 
 ];
 
