@@ -1,0 +1,54 @@
+/* componente search caixa de pesquisa*/
+
+.containerSearch {
+  width: 100%;
+  position: fixed;
+  top: 0; /* Mantém o menu no topo */
+  left: 0;
+  background-color: white;
+  z-index: 10000;
+  height: 45vh; /* Ajuste para ocupar menos da metade da tela */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* Permite rolagem se necessário */
+}
+
+.search_input2 {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  width: 100%;
+}
+
+.search-input {
+  width: 90%;
+  height: 40px;
+  padding: 5px;
+}
+
+.containerSearch_item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 10px;
+  width: 100%;
+}
+
+.box_itemSearch {
+  flex: 0 1 200px; /* Mantém a largura mínima de 200px, permitindo que itens menores se concentrem no centro */
+  margin: 10px; /* Margem entre os itens */
+  text-align: center;
+  overflow: hidden; /* Evita que o conteúdo ultrapasse o contêiner */
+}
+
+.item-image {
+  width: 200px; /* Defina uma largura fixa */
+  height: 150px; /* Defina uma altura fixa */
+  object-fit: cover; /* Garante que a imagem preencha o contêiner sem distorcer */
+  display: block;
+  margin: 0 auto; /* Centraliza a imagem */
+}
+

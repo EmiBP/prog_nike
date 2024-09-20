@@ -1,0 +1,231 @@
+/* Header */
+
+.link_text_header {
+  display: block;
+}
+.icons_header {
+  display: none;
+}
+
+
+
+.box_header {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FFFFFF;
+  padding-top: 30px;
+
+
+}
+
+
+.box_header_img a img {
+  width: 120px;
+}
+
+.box_nav_header{
+  box-sizing: border-box;
+}
+.box_nav_header nav{
+  display: flex;
+  gap: 10px
+
+}
+
+
+/* HEADER category */
+.box_categoryC1_header,.box_icons_header, .box_inputSearch_header, .box_categoryC1_nav_header nav ul  {
+  display: flex;
+
+}
+
+
+.box_categoryC1_header {
+ display: block;
+justify-content:space-between;
+
+}
+
+.box_categoryC1_nav_header {
+display: flex;
+ font-size: 80%;
+ margin: 30px;
+ clear: both;
+
+}
+
+.box_categoryC1_nav_header ul {
+  gap: 10px;
+}
+
+
+.box_categoryC1_nav_header li a {
+
+  color: rgb(39, 38, 38);
+
+
+}
+
+/* input search header */
+
+.container_SearchHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.box_inputSearch_header .search-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.box_inputSearch_header input {
+  width: 300px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-left: 10px;
+}
+
+.box_icons_header {
+  display: flex;
+  align-items: center;
+}
+
+.box_icons_header a {
+  position: relative;
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.box_icons_header svg {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  transition: fill 0.2s ease;
+}
+
+.box_icons_header a:hover svg {
+  fill: #111;
+}
+
+.icon-cart {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+
+/* box prodotti */
+
+.box_prodotti_header  {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 15px;
+  font-weight: 400;
+  gap: 9px;
+  padding: 10px 0;
+
+
+}
+
+.box_prodotti_header a {
+  font-size: 13px;
+  color: rgb(22, 20, 20);
+  cursor: pointer;
+  text-decoration: underline;
+
+}
+
+
+
+.box1_nav_header nav div:nth-child(n + 2) {
+  border-left: solid 1.2px black;
+
+}
+.link_text_header {
+display: flex;
+align-items: flex-start;
+
+}
+
+.link_text_header {
+
+ padding: 0 6px;
+ font-family: Arial, Helvetica, sans-serif;
+ font-weight: bold;
+ color: rgb(12, 12, 12);
+ font-size: 11px;
+
+}
+
+/* box_category Nav Header menu nav que aparece evidencia scopri sport e td mais */
+
+
+.box_categoryC1_header {
+ display: flex;
+ justify-content: center;
+
+}
+
+.box_categoryC1_nav_header_newEvidence {
+ background-color: white;
+
+ font-size: 13px;
+ position: absolute;
+ left: 0px;
+
+
+}
+
+.boxCAT1 {
+ width: 100%;
+ padding: 20px 0;
+ display: flex;
+ justify-content: center;
+ gap: 60px;
+
+
+
+}
+
+
+.box_inEvidenza  ul, .box_scopriIcone ul, .box_scopriSport  ul{
+ display: flex;
+ flex-direction: column;
+
+}
+
+.box_scopriSport li {
+ cursor: pointer;
+}
+
+.boxCAT1 p{
+ font-weight: 600;
+}
+.boxCAT1 li {
+ line-height: 20px;
+}
+
+
+.box2_categoryC1_header {
+ display: flex;
+ gap: 10px;
+}
