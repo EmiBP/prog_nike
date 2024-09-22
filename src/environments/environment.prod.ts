@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiURL: 'NEXT_PUBLIC_API_URL'
+  apiURL: process.env['NEXT_PUBLIC_API_URL'] || 'https://sua-api-em-producao.com/prodotti' // URL de produção como fallback
 };

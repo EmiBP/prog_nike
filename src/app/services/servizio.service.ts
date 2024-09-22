@@ -12,7 +12,7 @@ export class ServizioService {
 
 
 
-  private apiURL = environment.apiURL;
+  private apiURL = process.env['NEXT_PUBLIC_API_URL'];
   private prodottiCarrello: { prodotto: Prodotto; quantita: number }[] = [];
 
 
