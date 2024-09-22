@@ -214,3 +214,34 @@ width: 260px;
 	color: aliceblue;
 	float: right;
 }
+
+@media (max-width: 768px) {
+  .main_box2 img {
+    width: 100%;
+  }
+
+  #container_Main {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  #container_taglie {
+
+    align-items: center;
+  }
+
+
+  .colori_options {
+
+    display: flex;
+       flex-wrap: wrap;
+       gap: 10px
+
+  }
+
+
+
+
+
+
+}

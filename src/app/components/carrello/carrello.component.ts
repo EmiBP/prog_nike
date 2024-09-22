@@ -49,9 +49,20 @@ export class CarrelloComponent implements OnInit {
     this.servizioService.updateQuantita(prodottoId, quantita);
     this.aggiornaCarrello();  // Atualiza o carrinho após a mudança de quantidade
   }
+
   vaiAConsegna() {
-    this.servizioService.vaiAConsegna(this.timeoutId);
+    // Verifique se prodottiCarrello está definido e se contém itens
+    if (this.prodottiCarrello && this.prodottiCarrello.length > 0) {
+      // Redirecionar para a página de entrega
+      this.router.navigate(['/consegna']);
+    } else {
+      // Exibir uma mensagem de erro ou feedback para o usuário
+      console.error('O carrinho está vazio!');
+    }
   }
+
+
+
 
   vaiAlPagamento() {
     this.servizioService.vaiAlPagamento(this.timeoutId);

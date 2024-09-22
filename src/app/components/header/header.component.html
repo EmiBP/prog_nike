@@ -12,7 +12,7 @@
   <div class="box_nav_header">
     <nav>
       <div>
-        <a class="icons_header" href="#">
+        <a class="icons_header" (click)="toggleHeaderSearch()">
           <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" role="img" width="24px" height="24px" fill="none">
             <path stroke="currentColor" stroke-width="1.5" d="M13.962 16.296a6.716 6.716 0 01-3.462.954 6.728 6.728 0 01-4.773-1.977A6.728 6.728 0 013.75 10.5c0-1.864.755-3.551 1.977-4.773A6.728 6.728 0 0110.5 3.75c1.864 0 3.551.755 4.773 1.977A6.728 6.728 0 0117.25 10.5a6.726 6.726 0 01-.921 3.407c-.517.882-.434 1.988.289 2.711l3.853 3.853">
             </path>
@@ -21,7 +21,7 @@
         <a class="link_text_header" routerLink="">Trova un negozio</a>
       </div>
       <div>
-        <a class="icons_header" href="#">
+        <a class="icons_header">
           <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" role="img" width="24px" height="24px" fill="none">
             <path stroke="currentColor" stroke-width="1.5" d="M3.75 21v-3a3.75 3.75 0 013.75-3.75h9A3.75 3.75 0 0120.25 18v3M12 3.75a3.75 3.75 0 100 7.5 3.75 3.75 0 000-7.5z"></path>
           </svg>
@@ -29,21 +29,60 @@
         <a class="link_text_header" routerLink="">Aiuto</a>
       </div>
       <div>
-        <a class="icons_header" href="#">
-          <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" role="img" width="24px" height="24px" fill="none">
-            <path stroke="currentColor" stroke-width="1.5" d="M8.25 8.25V6a2.25 2.25 0 012.25-2.25h3a2.25 2.25 0 110 4.5H3.75v8.25a3.75 3.75 0 003.75 3.75h9a3.75 3.75 0 003.75-3.75V8.25H17.5"></path>
-          </svg>
+        <a (click)="vaiAlCarrello()" class="icons_header"  style="cursor: pointer;">
+          <div class="icon-cart2">
+            <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" role="img" width="24px" height="24px" fill="none">
+              <path stroke="currentColor" stroke-width="1.5" d="M8.25 8.25V6a2.25 2.25 0 012.25-2.25h3a2.25 2.25 0 110 4.5H3.75v8.25a3.75 3.75 0 003.75 3.75h9a3.75 3.75 0 003.75-3.75V8.25H17.5"></path>
+            </svg>
+            <span class="cart-count2">{{ numeroProdottiCarrello }}</span>
+          </div>
         </a>
         <a class="link_text_header" routerLink="">Unisciti a noi</a>
       </div>
       <div>
-        <a class="icons_header" href="#">
+        <a class="icons_header" (click)="toggleMenuLaterale()">
           <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" role="img" width="24px" height="24px" fill="none">
             <path stroke="currentColor" stroke-width="1.5" d="M21 5.25H3M21 12H3m18 6.75H3"></path>
           </svg>
         </a>
+
+        <!-- Menu lateral -->
+        <div class="menu-laterale" *ngIf="menuLateraleAperto">
+          <button (click)="toggleMenuLaterale()">X</button>
+
+          <ul>
+            <li *ngFor="let categoria of categorie" (click)="toggleSubMenu(categoria)">
+              {{ categoria.nome }}
+              <span *ngIf="categoria.aperto">&#9650;</span>
+              <span *ngIf="!categoria.aperto">&#9660;</span>
+
+              <ul *ngIf="categoria.aperto">
+                <ng-container *ngFor="let subCategoria of categoria.subCategorie">
+                  <li *ngIf="!isString(subCategoria)">
+                    <p class="titulo-subcategoria">{{ subCategoria.nome }}</p>
+                    <ul>
+                      <li *ngFor="let opcao of subCategoria.opcoes">
+                        <span (click)="opcao.acao ? opcao.acao() : null">{{ opcao.nome }}</span>
+                      </li>
+                    </ul>
+                  </li>
+                </ng-container>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+
+
+
         <a class="link_text_header" routerLink="">Accedi</a>
       </div>
+
+
+
+
+
+
     </nav>
   </div>
 </div>
@@ -55,7 +94,7 @@
     <nav>
       <ul>
         <li>
-          <a  (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()" style="cursor: pointer;">Novità e in evidenza</a>
+          <a class="menu1_header"  (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()" style="cursor: pointer;">Novità e in evidenza</a>
           <div  style="width: 100%;" class="box_categoryC1_nav_header_newEvidence" *ngIf="showItem" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()" >
             <div class="boxCAT1" *ngIf="showItem">
               <div class="box_inEvidenza">
@@ -94,17 +133,15 @@
             </div>
           </div>
         </li>
-        <li><a routerLink="">Uomo</a></li>
-        <li><a routerLink="">Donna</a></li>
-        <li><a routerLink="">Kids</a></li>
-        <li><a routerLink="">Outlet</a></li>
+        <li><a class="menu1_header" routerLink="">Uomo</a></li>
+        <li><a class="menu1_header" routerLink="">Donna</a></li>
+        <li><a class="menu1_header" routerLink="">Kids</a></li>
+        <li><a class="menu1_header" routerLink="">Outlet</a></li>
       </ul>
     </nav>
   </div>
 
 </div>
-
-
 
 <!-- aqui está o input de busca do header -->
 <div class="container_SearchHeader">
@@ -129,11 +166,11 @@
     </a>
 
     <!-- Ícone de bolsa para o carrinho -->
-    <a (click)="vaiAlCarrello()" class="icon-cart" style="cursor: pointer;">
+    <a (click)="vaiAlCarrello()" class="icon-cart2" style="cursor: pointer;">
       <svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" role="img" width="24px" height="24px" fill="none">
         <path stroke="currentColor" stroke-width="1.5" d="M8.25 8.25V6a2.25 2.25 0 012.25-2.25h3a2.25 2.25 0 110 4.5H3.75v8.25a3.75 3.75 0 003.75 3.75h9a3.75 3.75 0 003.75-3.75V8.25H17.5"></path>
       </svg>
-      <span class="cart-count">{{ numeroProdottiCarrello }}</span> <!-- Número de itens no carrinho -->
+      <span class="cart-count2">{{ numeroProdottiCarrello }}</span> <!-- Número de itens no carrinho -->
     </a>
 
   </div>

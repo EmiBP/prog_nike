@@ -99,3 +99,19 @@ small {
 .submit-btn:hover {
   background-color: #218838;
 }
+
+
+
+
+@media (max-width: 768px) {
+
+  .form-container {
+    margin: 0 auto;
+    width: 100%;
+
+  }
+
+
+
+}
+

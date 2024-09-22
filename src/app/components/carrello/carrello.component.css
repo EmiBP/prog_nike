@@ -2,6 +2,7 @@
 
 #container_carrello {
   display: flex;
+  justify-content: space-between;
 	padding-top: 30px;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 13px;
@@ -30,6 +31,7 @@
 	font-size: 20px;
 }
 .misura_text {
+  text-align: center;
 	padding: 5px 0;
 }
 
@@ -233,3 +235,138 @@ section.sec3 a {
 	background-color: rgb(255, 255, 255);
 	border: solid rgb(33, 32, 32) 2px;
 }
+
+
+@media (max-width: 768px) {
+
+
+  /* Ajustando o container principal */
+  .sec2 {
+    display: flex;
+    flex-direction: column; /* Organiza os elementos em coluna */
+    align-items: center; /* Centraliza os itens */
+    padding: 20px; /* Adiciona padding ao redor */
+    gap: 20px; /* Espaçamento entre os elementos */
+  }
+
+  /* Ajustando o tamanho das imagens */
+  .box_img {
+    display: flex;
+    flex-wrap: nowrap; /* Evita quebra de linha */
+    justify-content: center; /* Centraliza as imagens no container */
+    overflow-x: auto; /* Adiciona scroll horizontal para o container de imagens */
+    gap: 15px; /* Espaçamento entre as imagens */
+    padding-top: 10px;
+  }
+
+  .box_img img {
+    width: 150px; /* Define um tamanho maior para as imagens */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px; /* Bordas arredondadas para um visual mais limpo */
+  }
+
+  /* Ajuste dos botões */
+  .box_img button {
+    display: none; /* Remove os botões em telas menores */
+  }
+
+  /* Ajustando o texto */
+  .sec4 h3 {
+    font-size: 16px;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  div.box1 img {
+   width: 100%;
+  }
+
+  div.box1 {
+    width: 100%;
+  }
+  div.box2 {
+    display: flex;
+    font-size: 9px; /* Tamanho de fonte ajustado para melhor visualização */
+    margin-left: 0; /* Remove o margin */
+    width: 100%; /* Ocupa a largura total da tela */
+    text-align: center; /* Centraliza o texto */
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+
+  div.box_size select,
+  div.box_quantita select {
+    border: 1px solid #ccc; /* Mantém a borda simples */
+    font-size: 12px;
+    width: 50px; /* Aumenta a largura para melhor interação */
+    padding: 5px;
+  }
+
+  div.box3 {
+    width: 100%;
+    text-align: center; /* Centraliza o conteúdo */
+    padding-top: 10px;
+  }
+
+  div.box3 span {
+    font-size: 14px; /* Tamanho de fonte mais legível */
+    font-weight: 600;
+  }
+
+  /* Ajustes gerais para melhorar a legibilidade e usabilidade */
+  .sec5 {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .sec5 button {
+    font-size: 14px; /* Tamanho da fonte maior para legibilidade */
+    padding: 10px 20px;
+    width: 100%;
+    border-radius: 25px;
+    cursor: pointer;
+  }
+
+  /* Espaçamento entre os itens */
+  .box-destra-1, .box-destra-2, .box-destra-3 {
+    padding: 10px 0;
+    font-size: 12px;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .box-destra-3 {
+    padding: 15px 0;
+    font-size: 12px;
+    border-top: solid black 1px;
+    border-bottom: solid black 1px;
+  }
+
+  #container_carrello {
+    margin: 0 auto;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box-destra-1,  .box-destra-2 {
+    display: flex;
+    gap: 10px;
+  }
+
+  #box-destra {
+    width: 80%;
+  }
+
+  .h2_titolo {
+    text-align: center;
+  }
+
+
+
+
+}
+
+
+

@@ -110,3 +110,39 @@ color: black;
   cursor: pointer;
   border-radius: 8px;
 }
+
+
+@media (max-width: 768px) {
+
+  #lista_prodotti {
+
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  #container_new_arrivals , #container_prodotti {
+
+    gap: 10px;
+    flex-direction: column;
+
+
+  }
+
+  #filtro {
+
+    gap: 20px;
+    width: 100%;
+  }
+
+  #container_prodotti button {
+    align-items: center;
+  }
+  #container_prodotti {
+    align-items: center;
+  }
+
+
+
+
+
+
+}

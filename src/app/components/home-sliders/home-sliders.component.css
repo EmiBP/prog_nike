@@ -1,4 +1,3 @@
-
 .boxSliders{
 
   margin: 0 auto;
@@ -17,7 +16,9 @@
 
 
 /*----------> new_arrivals_product, .icons_product, news_shoes e sport_product */
-
+.new_arrivals_product h2 {
+  padding-top: 50px;
+}
 /* slider wrap  */
 
 .icons_product .slider-wrap, .news_shoes .slider-wrap,.new_arrivals_product .slider-wrap, .sport_product .slider-wrap  {
@@ -194,4 +195,74 @@
 
 
 
+/* Ajustes para telas menores que 768px */
+@media (max-width: 768px) {
+  .icons_product .slider-wrap,
+  .news_shoes .slider-wrap,
+  .new_arrivals_product .slider-wrap,
+  .sport_product .slider-wrap {
+    overflow-x: auto; /* Habilita o scroll horizontal */
+    display: flex;
+    padding: 0 10px; /* Ajusta o espaçamento interno */
+    justify-content: start; /* Garante que o scroll comece pela esquerda */
+    padding-bottom: 30px;
+
+  }
+
+  .icons_product .slider-main,
+  .news_shoes .slider-main,
+  .new_arrivals_product .slider-main,
+  .sport_product .slider-main {
+    display: flex;
+    gap: 10px; /* Mantém espaçamento entre as imagens */
+    flex-wrap: nowrap; /* Garante que os itens fiquem em linha */
+  }
+  .icons_product
+  h2,
+  .news_shoes
+  h2,
+  .new_arrivals_product
+  h2,
+  .sport_product
+  h2 {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .icons_product .item,
+  .news_shoes .item,
+  .new_arrivals_product .item,
+  .sport_product .item {
+    flex: 0 0 auto; /* Não permite que os itens cresçam ou encolham */
+
+    max-width: 100%; /* Garante que a imagem não ultrapasse os limites */
+    box-sizing: border-box; /* Inclui padding e border no tamanho do item */
+    scroll-snap-align: center; /* Mantém o snapping no centro */
+    border-radius: 8px; /* Bordas arredondadas para estética */
+  }
+
+  /* Oculta os botões prev e next */
+  .next .prev {
+    display: none;
+  }
+
+
+  /* Garante que o container respeite a largura da tela */
+  .slider-wrap {
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: auto;
+  }
+
+  .icons_product .text, .sport_product .text {
+    width: 360px;
+
+  }
+
+  .sport_product .button-area, .new_arrivals_product .button-area, .icons_product .button-area, .news_shoes .button-area{
+    display: none;
+  }
+
+
+}
 

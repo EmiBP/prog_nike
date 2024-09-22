@@ -117,6 +117,7 @@ display: flex;
 
 .icon-cart {
   position: relative;
+  display: inline-block;
 }
 
 .cart-count {
@@ -131,6 +132,40 @@ display: flex;
   font-weight: bold;
 }
 
+/* icon cart 2 */
+
+.icon-cart2 {
+  position: relative;
+  /* display: inline-block; */
+}
+
+.icon-cart2 svg {
+  transition: fill 0.3s ease;
+}
+
+/* Estilo para o número do carrinho */
+.cart-count2 {
+  position: absolute;
+  top: -5px; /* Ajuste essa propriedade conforme necessário */
+  right: -10px; /* Ajuste essa propriedade conforme necessário */
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Efeito ao passar o mouse sobre o ícone */
+.icon-cart2:hover svg {
+  fill: #333; /* Cor mais escura ao passar o mouse */
+}
+
+/* Estilo para escurecer o ícone ao passar o mouse */
+.icon-cart2:hover {
+  opacity: 0.7;
+}
 
 /* box prodotti */
 
@@ -228,4 +263,105 @@ align-items: flex-start;
 .box2_categoryC1_header {
  display: flex;
  gap: 10px;
+}
+
+/* Estilos para o menu lateral */
+.menu-laterale {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 80%;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow-y: auto; /* Permite rolagem no menu lateral */
+}
+
+.menu-laterale ul {
+  list-style: none;
+  padding: 0;
+}
+
+.menu-laterale > ul {
+  padding-left: 0; /* Remove padding do menu principal */
+}
+
+.menu-laterale li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+  transition: font-size 0.2s; /* Transição suave para o hover */
+  text-align: left; /* Alinha o texto à esquerda */
+}
+
+.menu-laterale button {
+  align-self: flex-end;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.menu-laterale ul ul {
+  padding-left: 0; /* Remove padding do submenu para alinhar à esquerda */
+  margin-top: 5px; /* Espaço entre o item e o submenu */
+}
+
+.menu-laterale ul ul li {
+  padding: 5px 0; /* Espaçamento interno dos itens do submenu */
+  border: none; /* Remove bordas do submenu */
+}
+
+.titulo-subcategoria {
+  font-size: 16px; /* Tamanho do título da subcategoria */
+  font-weight: bold; /* Destaca o título */
+}
+
+.menu-laterale ul ul li span {
+  font-size: 14px; /* Tamanho da fonte dos itens do submenu */
+}
+
+.menu-laterale li:hover {
+  font-size: 18px; /* Aumenta o tamanho da fonte ao passar o mouse */
+}
+
+
+
+
+@media (max-width: 768px) {
+  .icons_header {
+    display: flex; /* Torna os ícones visíveis */
+  }
+
+  .link_text_header {
+    display: none; /* Esconde o texto dos links */
+  }
+
+  #searchInput {
+    width: 100%;
+  }
+
+  .box_header_img img{
+    width: 100%;
+  }
+
+  .box_categoryC1_header{
+    display: none;
+  }
+
+  .container_SearchHeader {
+    justify-content: center;
+  }
+
+  .box_icons_header{
+    display: none;
+  }
+
+
+
+
 }
