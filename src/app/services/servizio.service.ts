@@ -12,7 +12,7 @@ export class ServizioService {
 
 
 
-  private apiURL = environment.apiURL || 'http://localhost:3000/prodotti';
+  private apiURL = environment.apiURL;
   private prodottiCarrello: { prodotto: Prodotto; quantita: number }[] = [];
 
 
