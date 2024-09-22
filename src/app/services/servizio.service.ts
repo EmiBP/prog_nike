@@ -3,7 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { Prodotto } from '../models/Prodotto';
 import { Router } from '@angular/router';
-import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +12,7 @@ export class ServizioService {
 
 
 
-  private apiURL = environment.apiURL;
+  private apiURL = 'https://database-nike.vercel.app/prodotti';
   private prodottiCarrello: { prodotto: Prodotto; quantita: number }[] = [];
 
 
