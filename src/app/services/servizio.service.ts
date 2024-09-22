@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { Prodotto } from '../models/Prodotto';
 import { Router } from '@angular/router';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ export class ServizioService {
 
 
 
-  private apiURL = 'http://localhost:3000/prodotti';
+  private apiURL = environment.apiURL || 'http://localhost:3000/prodotti';
   private prodottiCarrello: { prodotto: Prodotto; quantita: number }[] = [];
 
 
