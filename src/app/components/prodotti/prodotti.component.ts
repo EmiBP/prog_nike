@@ -35,6 +35,8 @@ export class ProdottiComponent implements OnInit {
     });
   }
 
+
+
   // Navegar para a página de detalhes do produto
   onItemClick(id: number): void {
     // Lógica para navegar ou realizar ação ao clicar no produto

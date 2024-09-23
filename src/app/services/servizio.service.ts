@@ -12,7 +12,7 @@ export class ServizioService {
 
 
 
-  private apiURL = 'https://cors-anywhere.herokuapp.com/https://gist.githubusercontent.com/EmiBP/27932b7e4bdb3a6b529d46be5d426558/raw/d95fd0a6b73449925274cc82179aed38e0bb161f/gistfile1.txt';
+  private apiURL = 'http://localhost:3000/prodotti';
   private prodottiCarrello: { prodotto: Prodotto; quantita: number }[] = [];
 
 
