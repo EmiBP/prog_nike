@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-carrello',
   templateUrl: './carrello.component.html',
-  styleUrls: ['./carrello.component.css']  // Corrigido de 'styleUrl' para 'styleUrls'
+  styleUrls: ['./carrello.component.css']
 })
 export class CarrelloComponent implements OnInit {
   prodottiCarrello: { prodotto: Prodotto; quantita: number }[] = [];
@@ -27,7 +27,7 @@ export class CarrelloComponent implements OnInit {
 
 
   removeItem(prodottoId: number, taglia?: string, colore?: string) {
-    const tagliaFinal = taglia || '';  // Se taglia for undefined, usa string vazia
+    const tagliaFinal = taglia || '';
     const coloreFinal = colore || '';
 
     this.servizioService.removeProdottoCarrello(prodottoId, tagliaFinal, coloreFinal);
@@ -47,16 +47,15 @@ export class CarrelloComponent implements OnInit {
 
   aggiornaQuantita(prodottoId: number, quantita: number) {
     this.servizioService.updateQuantita(prodottoId, quantita);
-    this.aggiornaCarrello();  // Atualiza o carrinho após a mudança de quantidade
+    this.aggiornaCarrello();
   }
 
   vaiAConsegna() {
-    // Verifique se prodottiCarrello está definido e se contém itens
     if (this.prodottiCarrello && this.prodottiCarrello.length > 0) {
       // Redirecionar para a página de entrega
       this.router.navigate(['/consegna']);
     } else {
-      // Exibir uma mensagem de erro ou feedback para o usuário
+
       console.error('O carrinho está vazio!');
     }
   }

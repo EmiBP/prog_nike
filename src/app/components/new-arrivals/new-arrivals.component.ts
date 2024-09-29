@@ -31,7 +31,7 @@ export class NewArrivalsComponent implements OnInit {
   carregarNovosProdutos(): void {
     this.servizioService.getNovosProdutos().subscribe((response: any) => {
       this.prodotti = response;
-      this.filtraProdotti(); // Aplica a filtragem ao carregar novos produtos
+      this.filtraProdotti();
     });
   }
 
@@ -60,7 +60,6 @@ export class NewArrivalsComponent implements OnInit {
 
   filtraProdotti(): void {
     this.prodottiFiltrati = this.prodotti.filter(prodotto => {
-      // Checa se "colori_disponibili" é um array antes de usar "includes"
       const categoriaValida = !this.categoriaSelezionata || prodotto.categoria === this.categoriaSelezionata;
       const coloreValido = !this.coloreSelezionato ||
                            (Array.isArray(prodotto.colori_disponibili) && prodotto.colori_disponibili.includes(this.coloreSelezionato));

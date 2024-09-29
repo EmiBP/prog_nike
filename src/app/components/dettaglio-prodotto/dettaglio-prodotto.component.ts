@@ -31,18 +31,18 @@ export class DettaglioProdottoComponent implements OnInit {
       });
     } else {
       console.error('ID do produto não encontrado');
-      // Redirecionar ou mostrar uma mensagem de erro
+
     };
   }
 
   selezionaTaglia(taglia: string) {
-    console.log('Taglia selecionada:', taglia); // Para verificar se está funcionando
+    console.log('Taglia selecionada:', taglia);
     this.tagliaSelezionata = taglia;
     this.erroreTaglia = false;
   }
 
   selezionaColore(colore: string) {
-    console.log('Colore selecionado:', colore); // Para verificar se está funcionando
+    console.log('Colore selecionado:', colore);
     this.coloreSelezionato = colore;
     this.erroreColore = false;
   }
@@ -63,7 +63,6 @@ export class DettaglioProdottoComponent implements OnInit {
 
     console.log('Aggiunto al carrello', this.prodotto, this.tagliaSelezionata, this.coloreSelezionato);
 
-    // Adiciona o produto ao serviço de carrinho
     const prodottoConDettagli = {
       ...this.prodotto,
       taglia: this.tagliaSelezionata,
@@ -85,15 +84,13 @@ export class DettaglioProdottoComponent implements OnInit {
   }
 
   visualizzaCarrello() {
-    this.router.navigate(['/carrello']);  // Redireciona para o componente Carrello
+    this.router.navigate(['/carrello']);
   }
 
-  // Redireciona para o componente de pagamento
   vaiPagamento() {
-    this.router.navigate(['/form-pagamento']);  // Redireciona para o componente FormPagamento
+    this.router.navigate(['/form-pagamento']);
   }
 
-    // Usando o método do serviço para redirecionar ao carrinho
     vaiAlCarrello() {
       this.servizioService.vaiAlCarrello(this.timeoutId);
     }

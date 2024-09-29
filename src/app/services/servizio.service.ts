@@ -21,7 +21,7 @@ export class ServizioService {
   constructor(private http: HttpClient, private router: Router) {}
 
   getAll(): Observable<Prodotto[]> {
-    const limit = 25;  // Defina o limite de itens aqui
+    const limit = 25;
     return this.http.get<Prodotto[]>(`${this.apiURL}?_limit=${limit}`);
   }
 
@@ -30,19 +30,19 @@ export class ServizioService {
   }
 
   getNovosProdutos() {
-    const limit = 25;  // Limite de itens
+    const limit = 25;
     return this.http.get(`${this.apiURL}?nuovo_arrivi=true&_limit=${limit}`);
   }
 
   setProdottoCarrello(prodottiCarrello: { prodotto: Prodotto; quantita: number }[]) {
-    this.prodottiCarrello = prodottiCarrello; // Atualize o array local
-    this.carrelloSubject.next(this.prodottiCarrello); // Emita a nova versão do carrinho para os observadores
+    this.prodottiCarrello = prodottiCarrello;
+    this.carrelloSubject.next(this.prodottiCarrello);
   }
 
 
   clearCarrello() {
     this.prodottiCarrello = [];
-    this.carrelloSubject.next(this.prodottiCarrello); // Emite a mudança para os inscritos
+    this.carrelloSubject.next(this.prodottiCarrello);
   }
 
   getProdottoCarrello() {
@@ -75,7 +75,7 @@ export class ServizioService {
     const index = this.prodottiCarrello.findIndex(item => item.prodotto.id === prodottoId);
     if (index !== -1) {
       this.prodottiCarrello[index].quantita = quantita;
-      this.carrelloSubject.next(this.prodottiCarrello);  // Emite a mudança para todos os inscritos
+      this.carrelloSubject.next(this.prodottiCarrello);
     }
   }
 
@@ -91,40 +91,38 @@ export class ServizioService {
     );
 
     if (index > -1) {
-      this.prodottiCarrello.splice(index, 1); // Remove o item do array
+      this.prodottiCarrello.splice(index, 1);
     }
 
-    // Emite a mudança para os inscritos
     this.carrelloSubject.next(this.prodottiCarrello);
   }
 
   vaiAlCarrello(timeoutId: any) {
     if (timeoutId) {
-      clearTimeout(timeoutId);  // Cancela o timeout se existir
+      clearTimeout(timeoutId);
     }
-    this.router.navigate(['/carrello']);  // Redireciona para o componente de carrinho
+    this.router.navigate(['/carrello']);
   }
 
-  // Método para redirecionar ao pagamento
   vaiAlPagamento(timeoutId: any) {
     if (timeoutId) {
-      clearTimeout(timeoutId);  // Cancela o timeout se existir
+      clearTimeout(timeoutId);
     }
-    this.router.navigate(['/form-pagamento']);  // Redireciona para o componente de pagamento
+    this.router.navigate(['/form-pagamento']);
   }
 
   vaiAConsegna(timeoutId: any) {
     if (timeoutId) {
-      clearTimeout(timeoutId);  // Cancela o timeout se existir
+      clearTimeout(timeoutId);
     }
-    this.router.navigate(['/consegna']);  // Redireciona para o componente de pagamento
+    this.router.navigate(['/consegna']);
   }
 
   vaiAllaPaginaFinalpage(timeoutId: any) {
     if (timeoutId) {
-      clearTimeout(timeoutId);  // Cancela o timeout se existir
+      clearTimeout(timeoutId);
     }
-    this.router.navigate(['/final-page']);  // Redireciona para o componente de pagamento
+    this.router.navigate(['/final-page']);
   }
 
 

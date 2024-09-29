@@ -14,8 +14,8 @@ export class HeaderSearchComponent implements OnInit {
 
 
 
-  queryField: FormControl = new FormControl(); // Controlador para o input de busca
-  results$!: Observable<any>; // Para armazenar os resultados
+  queryField: FormControl = new FormControl();
+  results$!: Observable<any>;
 
   constructor(private servizioService: ServizioService, private router: Router) {}
 
@@ -26,23 +26,20 @@ export class HeaderSearchComponent implements OnInit {
     );
   }
 
-  // Função para filtrar os resultados com base na query
   filterResults(query: string): Observable<any[]> {
     return this.servizioService.getAll().pipe(
       map(prodotti =>
         prodotti.filter(prod =>
-          prod.nome.toLowerCase().includes(query.toLowerCase()) // Filtra por nome
+          prod.nome.toLowerCase().includes(query.toLowerCase())
         )
       )
     );
   }
 
-  // Função chamada ao clicar em um item da busca
   onSelectItem(id: number): void {
-    this.router.navigate([`/dettaglio-prodotto/${id}`]); // Redireciona para o componente de detalhes do item
-  }
+    this.router.navigate([`/dettaglio-prodotto/${id}`]);
+    }
 
-  // Função para disparar a busca ao clicar na lupa
   onSearch(): void {
     const query = this.queryField.value.trim();
     if (query) {
@@ -51,7 +48,7 @@ export class HeaderSearchComponent implements OnInit {
   }
 
 
-  showComponentA: boolean = true; // Variável que controla a visibilidade do Componente A
+  showComponentA: boolean = true;
 
 
   hideComponentA(): void {

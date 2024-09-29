@@ -36,47 +36,38 @@ export class ConsengaComponent {
   onSubmit() {
     this.errors = {};
 
-    // Validazione nome
     if (!this.nomeCognomeRegex.test(this.formData.nome)) {
       this.errors.nome = 'Inserisci un nome valido (minimo 2 lettere)';
     }
 
-    // Validazione cognome
     if (!this.nomeCognomeRegex.test(this.formData.cognome)) {
       this.errors.cognome = 'Inserisci un cognome valido (minimo 2 lettere)';
     }
 
-    // Validazione indirizzo
     if (!this.indirizzoRegex.test(this.formData.indirizzo1)) {
       this.errors.indirizzo1 = 'Inserisci un indirizzo valido (minimo 3 caratteri)';
     }
 
-    // Validazione codice postale
     if (!this.codicePostaleRegex.test(this.formData.codicePostale)) {
       this.errors.codicePostale = 'Inserisci un codice postale valido (5 cifre)';
     }
 
-    // Validazione città
     if (!this.cittaRegex.test(this.formData.citta)) {
       this.errors.citta = 'Inserisci una città valida (minimo 2 lettere)';
     }
 
-    // Validazione paese
     if (this.formData.paese === '') {
       this.errors.paese = 'Seleziona un paese';
     }
 
-    // Validazione email
     if (!this.emailRegex.test(this.formData.email)) {
       this.errors.email = 'Inserisci un\'email valida';
     }
 
-    // Validazione telefono
     if (!this.telefonoRegex.test(this.formData.telefono)) {
       this.errors.telefono = 'Inserisci un numero di telefono valido (10-15 cifre)';
     }
 
-    // Se non ci sono errori, procedi
     if (Object.keys(this.errors).length === 0) {
       console.log('Form inviato correttamente:', this.formData);
       this.vaiAlPagamento();
